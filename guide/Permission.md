@@ -1,12 +1,12 @@
-## 权限
+# 权限
 
-### Device admin
+## Device admin
 
 有时候叫“设备管理器”
 
 权限最小，数量不限
 
-#### 激活
+## 激活
 
 - 安卓设置中激活（你可以在此应用中跳转到安卓设置的激活界面）
 - ADB命令
@@ -21,13 +21,13 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 小天才电话手表（Android 8.1）使用ADB激活Device admin会返回"Success"，但是实际上没有效果
 
-#### 停用
+## 停用
 
 - 此应用的”权限“界面中停用
 - 安卓设置中停用
 - ~~ADB命令停用~~（参考Device owner的ADB命令停用）
 
-### Profile owner
+## Profile owner
 
 权限中等
 
@@ -35,7 +35,7 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 每个用户都可以有一个Profile owner
 
-#### 激活
+## 激活
 
 - 使用ADB激活（不推荐，如果能使用ADB，建议激活Device owner），只能有一个Profile owner
 - Shizuku（本质上还是ADB激活）
@@ -48,7 +48,7 @@ ADB激活命令：
 dpm set-profile-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 ```
 
-#### 停用
+## 停用
 
 主用户：”权限“界面中停用~~或ADB停用~~
 
@@ -56,11 +56,11 @@ dpm set-profile-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 受管理的用户：删除用户即可
 
-### Device owner
+## Device owner
 
 权限最高，一个设备只能有一个
 
-#### 激活
+## 激活
 
 - 使用ADB激活
 - Shizuku（本质上还是ADB激活）
@@ -95,7 +95,7 @@ ColorOS：请使用testKey的apk，否则只能使用Device admin和工作资料
 
 小天才电话手表（Android 8.1）：完全不支持Device owner
 
-#### 停用
+## 停用
 
 - 恢复出厂设置（这是官方推荐的做法）
 - 在“权限”页面停用（推荐）
@@ -117,7 +117,7 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 以上三种方法停用Device owner都会同时停用Device admin
 
-### Shizuku
+## Shizuku
 
 请自己学习如何启动[Shizuku](https://github.com/RikkaApps/Shizuku)
 
@@ -126,16 +126,16 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 - 激活[Device admin](#device-admin)
 - 激活[Profile owner](#profile-owner)
 - 激活[Device owner](#device-owner)
-- 激活[由组织拥有的工作资料](#由组织拥有的工作资料)
+- 激活[由组织拥有的工作资料](ManagedProfile#由组织拥有的工作资料)
 - 列出所有Device owner和Profile owner
 
-### 设备唯一标识码
+## 设备唯一标识码
 
 需API31或以上
 
-需要先设置[组织ID](#组织ID)，同一个组织ID的设备唯一标识码相同，恢复出厂设置不变
+需要先设置[组织ID](ManagedProfile#组织ID)，同一个组织ID的设备唯一标识码相同，恢复出厂设置不变
 
-### 组织名称
+## 组织名称
 
 需API26或以上
 
@@ -143,13 +143,13 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 设置组织名称后会在一些地方显示此设备归xxx所有
 
-### 不受控制的账号类型
+## 不受控制的账号类型
 
 需Device owner或Profile owner
 
 作用未知
 
-### 锁屏信息
+## 锁屏信息
 
 需API24或以上
 
@@ -157,7 +157,7 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 在锁屏界面上显示的一段简短的消息
 
-### 提供支持的长/短消息
+## 提供支持的长/短消息
 
 需API24或以上
 
@@ -165,7 +165,7 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 提供支持的长消息不知道有啥用
 
-### 转移所有权
+## 转移所有权
 
 需要Device owner或Profile owner
 

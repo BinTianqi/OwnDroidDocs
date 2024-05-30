@@ -1,4 +1,4 @@
-## 应用管理
+# 应用管理
 
 如果是工作资料，只能管理工作资料中的应用
 
@@ -10,11 +10,11 @@
 pm list packages
 ```
 
-### 应用详情
+## 应用详情
 
 跳转到应用详情，不需要任何权限
 
-### 挂起
+## 挂起
 
 需要的权限：Device owner或Profile owner
 
@@ -22,13 +22,13 @@ pm list packages
 
 挂起应用，应用图标变为灰色，打开时会提示被IT管理员限制
 
-### 隐藏
+## 隐藏
 
 需要的权限：Device owner或Profile owner
 
 深度隐藏。`pm list packages`都看不到隐藏的应用。无法卸载隐藏的应用，因为找不到。你一定要记得隐藏的应用的包名，否则你只能去`/data/app`找被隐藏的应用
 
-### VPN常开
+## VPN常开
 
 需要的权限：Device owner或Profile owner
 
@@ -36,7 +36,7 @@ pm list packages
 
 需要应用支持VPN常开
 
-### 防卸载
+## 防卸载
 
 需要的权限：Device owner或Profile owner
 
@@ -44,7 +44,7 @@ pm list packages
 
 参考：用户限制->应用->卸载应用
 
-### 禁止用户控制
+## 禁止用户控制
 
 需要的权限： Device owner或Profile owner
 
@@ -53,7 +53,7 @@ pm list packages
 
 用户无法清除这些应用的存储空间，也无法强制停止应用，OwnDroid中的[清除应用存储](#清除应用存储)不受影响
 
-### 权限管理
+## 权限管理
 
 需要的权限：Device owner或Profile owner
 
@@ -77,7 +77,7 @@ pm list permissions
 
 在API31或以上，Profile owner不能再修改传感器相关权限，如果能修改传感器相关权限，说明这个设备是完全受管理设备（Device owner）
 
-### 跨资料应用
+## 跨资料应用
 
 需要的权限：工作资料的Profile owner
 
@@ -85,13 +85,13 @@ pm list permissions
 
 设置跨工作资料的应用，需要目标应用支持跨资料（比如GBoard）
 
-### 跨资料微件
+## 跨资料微件
 
 需要的权限：工作资料的Profile owner
 
 设置跨工作资料的桌面小部件提供者
 
-### 凭据管理策略
+## 凭据管理策略
 
 需要的权限：Device owner
 
@@ -99,7 +99,7 @@ pm list permissions
 
 作用未知
 
-### 许可的无障碍服务&输入法
+## 许可的无障碍服务&输入法
 
 需要的权限：Device owner或Profile owner
 
@@ -108,7 +108,7 @@ pm list permissions
 
 无论如何，系统的无障碍服务和输入法都是允许的
 
-### 卸载后保留的应用
+## 卸载后保留的应用
 
 需要Device owner
 
@@ -116,7 +116,7 @@ pm list permissions
 
 这个列表中的应用的APK将会一直保留，即使没有任何用户安装这个应用
 
-### 清除应用存储
+## 清除应用存储
 
 需要的权限：Device owner或Profile owner
 
@@ -124,7 +124,7 @@ pm list permissions
 
 清除应用的存储空间
 
-### 默认拨号应用
+## 默认拨号应用
 
 需要的权限：Device owner或Profile owner
 
@@ -132,12 +132,12 @@ pm list permissions
 
 没有测试过
 
-### 卸载应用
+## 卸载应用
 
 - 静默卸载（需要Device owner，否则没反应）
 - 请求卸载
 
-### 安装应用
+## 安装应用
 
 - 静默安装（需要Device owner，否则没反应）
 - 请求安装

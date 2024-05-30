@@ -1,10 +1,10 @@
-## 工作资料
+# 工作资料
 
 工作资料是一种特殊的用户，使用`pm list user`命令可以看到工作资料，工作资料的默认用户名是“工作资料”或“Work Profile”
 
-工作资料创建后默认禁用[安装未知来源应用](#应用)
+工作资料创建后默认禁用[安装未知来源应用](UserRestriction#应用)
 
-### 创建工作资料
+## 创建工作资料
 
 设备上不能有Device owner
 
@@ -20,7 +20,7 @@
 
 在WearOS上可以创建工作资料，但是会导致SystemUI停止运行一次。WearOS原生的启动器不会显示工作资料中的应用，你需要使用支持工作资料的启动器。你可以通过[ADB命令移除工作资料](#删除工作资料)。此外，不要尝试给工作资料重置密码，因为WearOS不能输入工作资料的密码。（测试环境：WearOS4(AVD)）
 
-### 由组织拥有的工作资料
+## 由组织拥有的工作资料
 
 需要API30或以上
 
@@ -40,13 +40,13 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 出现“Success”即为成功
 
-### 挂起个人应用
+## 挂起个人应用
 
 需要的权限：由组织拥有的工作资料的Profile owner
 
 只会挂起个人的用户应用，系统应用和OwnDroid仍然可以打开
 
-### 资料最长关闭时间
+## 资料最长关闭时间
 
 需要的权限：工作资料的Profile owner
 
@@ -54,7 +54,7 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 设置的时间不能小于72小时，如果小于72小时，按72小时算
 
-### 跨资料Intent过滤器
+## 跨资料Intent过滤器
 
 需要的权限：工作资料的Profile owner
 
@@ -62,7 +62,7 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 添加Intent过滤器以允许这些行为
 
-### 组织ID
+## 组织ID
 
 需要的权限：工作资料的Profile owner
 
@@ -70,11 +70,11 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 组织ID长度需在6~64个字符之间
 
-设置组织ID后才能在“权限”页面查看[设备唯一标识码](#设备唯一标识码)。不同的组织ID会有不同的设备唯一标识码
+设置组织ID后才能在“权限”页面查看[设备唯一标识码](Permission#设备唯一标识码)。不同的组织ID会有不同的设备唯一标识码
 
-### 删除工作资料
+## 删除工作资料
 
-你可以在工作资料中使用 [恢复出厂设置](#恢复出厂设置) 来删除工作资料
+你可以在工作资料中使用 [恢复出厂设置](SystemManager#恢复出厂设置) 来删除工作资料
 
 如果你的工作资料不是由组织拥有的，你可以打开安卓设置->安全->更多安全设置->设备管理器->带工作资料图标的OwnDroid->移除工作资料（非原生用户自己找）
 

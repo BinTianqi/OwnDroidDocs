@@ -1,8 +1,8 @@
-## 网络
+# 网络
 
 这个页面需要API24或以上才能进入
 
-### 查看Wi-Fi Mac地址
+## 查看Wi-Fi Mac地址
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -10,7 +10,7 @@
 
 得到的是设备真实的Wi-Fi Mac地址，不是连接Wi-Fi时随机生成的Mac地址
 
-### 优先网络服务
+## 优先网络服务
 
 需要的权限：Device owner
 
@@ -18,7 +18,7 @@
 
 功能开发中
 
-### Wi-Fi锁定
+## Wi-Fi锁定
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -26,7 +26,7 @@
 
 作用未知
 
-### 要求最小Wi-Fi安全等级
+## 要求最小Wi-Fi安全等级
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -41,7 +41,7 @@
 
 用户不能连接低于要求的安全等级的Wi-Fi，如果已经连接了这样的Wi-Fi，会立即断开
 
-### Wi-Fi SSID策略
+## Wi-Fi SSID策略
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -54,7 +54,7 @@
 
 设置用户能连接/不能连接的Wi-Fi
 
-### 私人DNS
+## 私人DNS
 
 需要的权限：Device owner
 
@@ -64,7 +64,7 @@
 
 也可以设置私人DNS主机名
 
-### 网络日志记录
+## 网络日志记录
 
 需要的权限：Device owner或工作资料的Profile owner
 
@@ -76,7 +76,7 @@
 
 功能开发中，所以现在使用收集不到任何内容
 
-### Wi-Fi密钥对
+## Wi-Fi密钥对
 
 需要的权限：Device owner或Profile owner
 
@@ -86,7 +86,7 @@
 
 作用未知
 
-### APN设置
+## APN设置
 
 需要的权限：Device owner
 

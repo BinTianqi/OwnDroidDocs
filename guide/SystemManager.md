@@ -1,16 +1,16 @@
-## 系统
+# 系统
 
-### 禁用相机
+## 禁用相机
 
 需要的权限：Device owner或Profile owner
 
-### 禁止截屏
+## 禁止截屏
 
 需要的权限：Device owner或Profile owner
 
 也会禁止AOSP自带的录屏
 
-### 隐藏状态栏
+## 隐藏状态栏
 
 需要的权限：Device owner或附属用户的Profile owner
 
@@ -18,7 +18,7 @@
 
 状态栏仍会显示时间和系统图标，但是通知图标会隐藏，并且状态栏不能下拉
 
-### 自动设置时间
+## 自动设置时间
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -26,7 +26,7 @@
 
 默认打开
 
-### 自动设置时区
+## 自动设置时区
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -34,35 +34,35 @@
 
 默认打开
 
-### 自动设置时间（弃用）
+## 自动设置时间（弃用）
 
 需要的权限：Device owner或Profile owner
 
 自从API30开始弃用，在API30或以上的设备上，此功能不会显示
 
-### 全局静音
+## 全局静音
 
 需要的权限：Device owner或Profile owner
 
-### 备份服务
+## 备份服务
 
 需要的权限：Device owner或Profile owner
 
 需要API26或以上
 
-### 禁止蓝牙分享联系人
+## 禁止蓝牙分享联系人
 
 需要的权限：Device owner或Profile owner
 
 需要API23或以上
 
-### 通用标准模式
+## 通用标准模式
 
 需要的权限：Device owner
 
 需要API30或以上
 
-### USB信号
+## USB信号
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -72,7 +72,7 @@
 
 默认打开
 
-### 锁屏方式
+## 锁屏方式
 
 禁用和启用锁屏方式，需要无锁屏密码
 
@@ -80,7 +80,7 @@
 
 需要API28或以上
 
-### 立即锁屏
+## 立即锁屏
 
 选项：重新输入密码（需API26或以上）
 
@@ -88,25 +88,25 @@
 
 无论勾不勾选这个选项，解锁时都需要重新输入密码
 
-### 请求错误报告
+## 请求错误报告
 
 需要API24或以上
 
 需要的权限：Device owner
 
-### 重启
+## 重启
 
 需要API24或以上
 
 需要的权限：Device owner
 
-### 修改时间
+## 修改时间
 
 输入从Epoch(1970/1/1 00:00:00 UTC)到你想设置的时间(毫秒)
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
-### 权限策略
+## 权限策略
 
 当应用请求权限时执行的操作
 
@@ -116,7 +116,7 @@
 
 需要的权限：Device owner或Profile owner
 
-### MTE策略
+## MTE策略
 
 MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](https://developer.android.google.cn/ndk/guides/arm-mte?hl=zh-cn)
 
@@ -130,7 +130,7 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 - 开启
 - 关闭
 
-### 附近App共享&附近通知共享
+## 附近App共享&附近通知共享
 
 需要的权限：Device owner或Profile owner
 
@@ -143,7 +143,7 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 - 禁用
 - 在足够安全时启用
 
-### 锁定任务模式
+## 锁定任务模式
 
 需要的权限：Device owner
 
@@ -161,7 +161,7 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
   - 允许锁屏（如果不允许，即使有密码也不会锁屏）
   - 阻止启动未允许的应用（阻止白名单应用启动非白名单应用，需要API30）
 
-### Ca证书
+## Ca证书
 
 需要的权限：Device owner或Profile owner
 
@@ -173,7 +173,7 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 - 清除所有用户证书
 
-### 安全日志&&重启前安全日志
+## 安全日志&&重启前安全日志
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -183,7 +183,7 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 这个功能正在开发中
 
-### 系统更新策略
+## 系统更新策略
 
 需要的权限：Device owner
 
@@ -196,7 +196,7 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 - 延迟30天
 - 默认（由用户决定）
 
-### 安装系统更新
+## 安装系统更新
 
 需要的权限：Device owner或由组织拥有的工作资料
 
@@ -204,7 +204,7 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 能否安装成功完全取决于系统
 
-### 恢复出厂设置
+## 恢复出厂设置
 
 **谨慎使用**
 
