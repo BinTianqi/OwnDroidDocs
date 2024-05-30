@@ -7,8 +7,8 @@ hero:
   tagline: A Device policy manager APP
   actions:
     - theme: brand
-      text: Guide
-      link: /Guide
+      text: Start
+      link: /guide/start
 
 features:
   - title: Easy to use

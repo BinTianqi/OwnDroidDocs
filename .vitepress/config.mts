@@ -7,14 +7,22 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/Guide' }
+      { text: 'Guide', link: '/guide/start' }
     ],
 
     sidebar: [
       {
         text: 'Guide',
         items: [
-          { text: 'Guide', link: '/Guide' }
+          { text: 'Start', link: '/guide/start' },
+	  { text: 'Permission', link: '/guide/Permission' },
+	  { text: 'System manager', link: '/guide/SystemManager' },
+	  { text: 'Network', link: '/guide/Network' },
+	  { text: 'Managed profile', link: '/guide/ManagedProfile' },
+	  { text: 'Application manager', link: '/guide/ApplicationManager' },
+	  { text: 'User restriction', link: '/guide/UserRestriction' },
+	  { text: 'User manager', link: '/guide/UserManager' },
+	  { text: 'Password and keyguard', link: '/guide/Password' }
         ]
       }
     ],
