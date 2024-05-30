@@ -1,16 +1,18 @@
 # 系统
 
-## 禁用相机
+## 选项
+
+### 禁用相机
 
 需要的权限：Device owner或Profile owner
 
-## 禁止截屏
+### 禁止截屏
 
 需要的权限：Device owner或Profile owner
 
 也会禁止AOSP自带的录屏
 
-## 隐藏状态栏
+### 隐藏状态栏
 
 需要的权限：Device owner或附属用户的Profile owner
 
@@ -18,7 +20,7 @@
 
 状态栏仍会显示时间和系统图标，但是通知图标会隐藏，并且状态栏不能下拉
 
-## 自动设置时间
+### 自动设置时间
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -26,7 +28,7 @@
 
 默认打开
 
-## 自动设置时区
+### 自动设置时区
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -34,35 +36,35 @@
 
 默认打开
 
-## 自动设置时间（弃用）
+### 自动设置时间（弃用）
 
 需要的权限：Device owner或Profile owner
 
 自从API30开始弃用，在API30或以上的设备上，此功能不会显示
 
-## 全局静音
+### 全局静音
 
 需要的权限：Device owner或Profile owner
 
-## 备份服务
+### 备份服务
 
 需要的权限：Device owner或Profile owner
 
 需要API26或以上
 
-## 禁止蓝牙分享联系人
+### 禁止蓝牙分享联系人
 
 需要的权限：Device owner或Profile owner
 
 需要API23或以上
 
-## 通用标准模式
+### 通用标准模式
 
 需要的权限：Device owner
 
 需要API30或以上
 
-## USB信号
+### USB信号
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
@@ -105,6 +107,14 @@
 输入从Epoch(1970/1/1 00:00:00 UTC)到你想设置的时间(毫秒)
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+
+## 修改时区
+
+需要的权限：Device owner或Profile owner
+
+可以查看所有时区ID
+
+需要关闭自动时区。你可以在系统设置中或[这里](#自动设置时区)关闭
 
 ## 权限策略
 

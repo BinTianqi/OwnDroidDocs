@@ -3,15 +3,11 @@ layout: home
 
 hero:
   name: OwnDroid
-  #text: "Wiki of OwnDroid"
-  tagline: A Device policy manager APP
+  tagline: 一个安卓的设备策略管理应用
   actions:
     - theme: brand
-      text: Start
+      text: 快速开始
       link: /guide/start
 
-features:
-  - title: Easy to use
-    details: OwnDroid is easy to use. 
 ---
 

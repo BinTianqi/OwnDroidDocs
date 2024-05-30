@@ -2,11 +2,11 @@
 
 ## Device admin
 
-有时候叫“设备管理器”
+即“设备管理器”
 
 权限最小，数量不限
 
-## 激活
+### 激活
 
 - 安卓设置中激活（你可以在此应用中跳转到安卓设置的激活界面）
 - ADB命令
@@ -21,7 +21,7 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 小天才电话手表（Android 8.1）使用ADB激活Device admin会返回"Success"，但是实际上没有效果
 
-## 停用
+### 停用
 
 - 此应用的”权限“界面中停用
 - 安卓设置中停用
@@ -35,11 +35,11 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 每个用户都可以有一个Profile owner
 
-## 激活
+### 激活
 
-- 使用ADB激活（不推荐，如果能使用ADB，建议激活Device owner），只能有一个Profile owner
+- 使用ADB激活（不推荐，如果能使用ADB，建议激活Device owner）
 - Shizuku（本质上还是ADB激活）
-- 创建工作资料，此应用会成为工作资料中的Profile owner，只能有一个Profile owner
+- [创建工作资料](ManagedProfile#创建工作资料)，OwnDroid会成为工作资料中的Profile owner
 - 成为Device owner后创建并管理用户，此应用会成为新用户的Profile owner，每个用户各有一个Profile owner
 
 ADB激活命令：
@@ -48,7 +48,7 @@ ADB激活命令：
 dpm set-profile-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 ```
 
-## 停用
+### 停用
 
 主用户：”权限“界面中停用~~或ADB停用~~
 
@@ -60,7 +60,7 @@ dpm set-profile-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 权限最高，一个设备只能有一个
 
-## 激活
+### 激活
 
 - 使用ADB激活
 - Shizuku（本质上还是ADB激活）
@@ -95,9 +95,9 @@ ColorOS：请使用testKey的apk，否则只能使用Device admin和工作资料
 
 小天才电话手表（Android 8.1）：完全不支持Device owner
 
-## 停用
+### 停用
 
-- 恢复出厂设置（这是官方推荐的做法）
+- 恢复出厂设置（比较彻底）
 - 在“权限”页面停用（推荐）
 - ADB命令停用（麻烦）
 
@@ -141,7 +141,7 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 需要Device owner或Profile owner
 
-设置组织名称后会在一些地方显示此设备归xxx所有
+设置组织名称后会在一些地方显示*此设备归xxx所有*
 
 ## 不受控制的账号类型
 

@@ -6,23 +6,23 @@ export default defineConfig({
   base: '/',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/start' }
+      { text: '主页', link: '/' },
+      { text: '指南', link: '/guide/start' }
     ],
 
     sidebar: [
       {
         text: 'Guide',
         items: [
-          { text: 'Start', link: '/guide/start' },
-	  { text: 'Permission', link: '/guide/Permission' },
-	  { text: 'System manager', link: '/guide/SystemManager' },
-	  { text: 'Network', link: '/guide/Network' },
-	  { text: 'Managed profile', link: '/guide/ManagedProfile' },
-	  { text: 'Application manager', link: '/guide/ApplicationManager' },
-	  { text: 'User restriction', link: '/guide/UserRestriction' },
-	  { text: 'User manager', link: '/guide/UserManager' },
-	  { text: 'Password and keyguard', link: '/guide/Password' }
+          { text: '开始', link: '/guide/start' },
+	      { text: '权限', link: '/guide/Permission' },
+	      { text: '系统', link: '/guide/SystemManager' },
+	      { text: '网络', link: '/guide/Network' },
+	      { text: '工作资料', link: '/guide/ManagedProfile' },
+	      { text: '应用管理', link: '/guide/ApplicationManager' },
+	      { text: '用户限制', link: '/guide/UserRestriction' },
+	      { text: '用户管理', link: '/guide/UserManager' },
+	      { text: '密码与锁屏', link: '/guide/Password' }
         ]
       }
     ],
