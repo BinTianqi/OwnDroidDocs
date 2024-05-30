@@ -7,11 +7,11 @@ hero:
   tagline: A Device policy manager APP
   actions:
     - theme: brand
-      text: Start
-      link: /start
+      text: Guide
+      link: /Guide
 
 features:
-  - title: Feature A
-    details: This is feature A
+  - title: Easy to use
+    details: OwnDroid is easy to use. 
 ---
 

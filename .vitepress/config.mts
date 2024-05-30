@@ -7,14 +7,14 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Start', link: '/start' }
+      { text: 'Guide', link: '/Guide' }
     ],
 
     sidebar: [
       {
-        text: 'Start',
+        text: 'Guide',
         items: [
-          { text: 'Start', link: '/start' }
+          { text: 'Guide', link: '/Guide' }
         ]
       }
     ],
