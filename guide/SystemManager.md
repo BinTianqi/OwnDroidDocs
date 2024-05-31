@@ -216,7 +216,9 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 ## 恢复出厂设置
 
-**谨慎使用**
+::: danger
+危险功能，谨慎使用
+:::
 
 需要的权限：Device admin
 

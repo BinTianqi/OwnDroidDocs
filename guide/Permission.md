@@ -133,7 +133,7 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 需API31或以上
 
-需要先设置[组织ID](ManagedProfile#组织ID)，同一个组织ID的设备唯一标识码相同，恢复出厂设置不变
+需要先设置[组织ID](ManagedProfile#组织ID)，不同组织ID的唯一标识码不同，恢复出厂设置不变
 
 ## 组织名称
 
@@ -161,7 +161,7 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 需API24或以上
 
-如果用户试图使用被挂起的应用或被禁用的功能，会显示提供支持的短消息
+如果用户试图使用被挂起的应用或被禁用的功能，会显示提供支持的短消息（默认的消息：请联系IT管理员）
 
 提供支持的长消息不知道有啥用
 
