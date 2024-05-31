@@ -214,7 +214,21 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 能否安装成功完全取决于系统
 
-## 恢复出厂设置
+## FRP策略
+
+FRP: Factory reset protection
+
+恢复出厂设置保护策略
+
+需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+
+需要设备支持持久数据块服务(persistent data block service)
+
+FRP用于防止不受信任的重置。简单来说，当FRP启用时，通过Recovery或FastBoot恢复出厂设置后需要登录谷歌账号。
+
+更多FRP相关知识请自行搜索
+
+## 清除数据
 
 ::: danger
 危险功能，谨慎使用

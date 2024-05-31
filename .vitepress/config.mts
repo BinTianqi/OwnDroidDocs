@@ -7,14 +7,14 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '指南', link: '/guide/start' }
+      { text: '指南', link: '/guide/' }
     ],
 
     sidebar: [
       {
         text: 'Guide',
         items: [
-          { text: '开始', link: '/guide/start' },
+          { text: '开始', link: '/guide/' },
 	      { text: '权限', link: '/guide/Permission' },
 	      { text: '系统', link: '/guide/SystemManager' },
 	      { text: '网络', link: '/guide/Network' },
