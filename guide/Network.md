@@ -2,13 +2,13 @@
 
 这个页面需要API24或以上的Device owner或Profile owner才能进入
 
-## 查看Wi-Fi Mac地址
+## Wi-Fi Mac地址
 
 需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
 需要API24或以上
 
-得到的是设备真实的Wi-Fi Mac地址，不是连接Wi-Fi时随机生成的Mac地址
+得到的是设备真实的Wi-Fi Mac地址，不是用于连接当前Wi-Fi的随机Mac地址
 
 ## 优先网络服务
 

@@ -129,6 +129,23 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 - 激活[由组织拥有的工作资料](ManagedProfile#由组织拥有的工作资料)
 - 列出所有Device owner和Profile owner
 
+## 设备信息
+
+### 设备策略管理器角色
+DPMRH: Device policy manager role holder
+
+### 加密状态
+有以下5种状态：不支持、未使用、正在使用、正在使用（默认密钥）、正在使用（每个用户分别加密）
+
+### 支持设备ID认证
+如果支持密钥证明和设备ID证明，返回true
+
+### 支持唯一设备认证
+如果设备上的StrongBox Keymaster可以配置单独的证明证书并且可以使用该证书签署证明记录，则返回true（只有StrongBox安全级别的Keymaster才能使用单独的证明证书进行证明）
+
+### 激活的Device admin
+一个已激活的Device admin的列表
+
 ## 设备唯一标识码
 
 需API31或以上
