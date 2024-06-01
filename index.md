@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide/start
+      link: /guide/
 
 ---
 

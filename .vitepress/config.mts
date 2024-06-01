@@ -4,6 +4,7 @@ export default defineConfig({
   title: "OwnDroid",
   description: "Wiki of OwnDroid",
   base: '/',
+  srcExclude: [ 'README.md' ],
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
