@@ -23,14 +23,15 @@ jobs:
       - name: Build
         run: npm run docs:build
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: .vitepress/dist
+          path: docs/.vitepress/dist
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vitepress/dist --project-name=owndroid --branch main
+          command: pages deploy docs/.vitepress/dist --project-name=owndroid --branch main
