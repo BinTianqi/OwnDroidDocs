@@ -3,7 +3,7 @@
 Welcome to OwnDroid docs
 
 ::: warning
-English docs are not complete. Please go to [zh_CN](zh_CN)
+English docs are not complete. Please go to [简体中文](zh_CN/start)
 :::
 
 ## Before you start
