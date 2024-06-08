@@ -7,6 +7,6 @@ hero:
   actions:
     - theme: brand
       text: Get started
-      link: /zh_CN/start
+      link: /start
 ---
 

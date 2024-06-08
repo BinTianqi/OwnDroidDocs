@@ -7,7 +7,7 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: 'Guide', link: '/zh_CN/start' }
+      { text: 'Guide', link: '/start' }
     ],
 
     lastUpdatedText: 'Last updated',
