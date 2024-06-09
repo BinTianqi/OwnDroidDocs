@@ -14,19 +14,19 @@ You can only use numeric PIN on WearOS platform. Don't set an alphabetic passwor
 
 ## Password info
 
-- Current password complexity. Please view [Required password complexity](#Required password complexity). (Require API29 or above)
+- **[API29]** Current password complexity. Please view [Required password complexity](#Required password complexity)
 
 - Is password complexity sufficient. If the current password complexity match the required password complexity
 
-- Password failed attempts. If you can see it, the value should be 0
+- Password failed attempts. If you can see it, the value should be 0 (TODO)
 
-- Unified password. true if the work profile and main user use a same password (Require API28 or above)
+- **[API28]** Unified password. true if the work profile and main user use a same password
 
 ## Reset password token
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API26 or above
+**[API26]**
 
 Actions:
 
@@ -49,12 +49,12 @@ Options:
 
 Actions: 
 
-- Reset password with token (Require API26 or above)
+- **[API26]** Reset password with token **[Device owner] [Profile owner]**
 - Reset password (Deprecated) (Before API24, Device admin can use it anytime. From API24, Device admin can set a password if no password it set, Device owner and Profile owner can reset password if the device is unlocked. Deprecated from API26)
 
 ## Screen timeout
 
-Require Device owner
+**[Device owner]**
 
 You can only set a shorter screen timeout in Settings. 
 
@@ -62,7 +62,7 @@ You can only set a shorter screen timeout in Settings.
 
 ## Password timeout
 
-Require Device owner
+**[Device owner]**
 
 If you never change your password during this limit, you will be asked to set a new password
 
@@ -70,7 +70,7 @@ If you never change your password during this limit, you will be asked to set a 
 
 ## Max failed passwords for wipe
 
-Require Device owner
+**[Device owner]**
 
 If you attempt wrong password that reach this limit, all data on your device will be wiped
 
@@ -78,7 +78,7 @@ If you attempt wrong password that reach this limit, all data on your device wil
 
 ## Password history length
 
-Require Device owner
+**[Device owner]**
 
 TODO
 
@@ -94,9 +94,9 @@ Minimum 1 hour, maximum 72 hours
 
 ## Required password complexity
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API31 or above
+**[API31]**
 
 There are 4 levels of password complexity: 
 
@@ -111,7 +111,7 @@ You can jump to Settings to set a new password by click _Request to set a new pa
 
 ## Keyguard features
 
-Require Device owner
+**[Device owner] [Profile owner]**
 
 TODO
 
@@ -137,7 +137,7 @@ Custom features:
 
 ## Require password quality
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 Deprecated from API31. Please use [Required password complexity](#Required password complexity)
 

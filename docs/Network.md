@@ -4,38 +4,38 @@ All functions there require API24 or above, Device owner or Profile owner. If no
 
 ## Wi-Fi Mac address
 
-Require Device owner or profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
 
-Require API24 or above
+**[API24]**
 
 This will show you the actual Wi-Fi Mac address of your device, not the randomized Mac
 
 ## Preferential network service
 
-Require Device owner
+**[Device owner]**
 
-Require API33 or above
+**[API33]**
 
 TODO
 
 ## Wi-Fi lockdown
 
-Require Device owner or Profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
 
-Require API30 or above
+**[API30]**
 
 TODO
 
 ## Minimum Wi-Fi security level
 
-Require Device owner or Profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
 
-Require API33 or above
+**[API33]**
 
 Options:
 
 - Open
-- WEP、WPA(2)-PSK
+- WEP, WPA(2)-PSK
 - WPA-EAP
 - WPA3-192bit
 
@@ -43,9 +43,9 @@ You can't connect Wi-Fis that security level is lower than it
 
 ## Wi-Fi SSID policy
 
-Require Device owner or Profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
 
-Require API33 or above
+**[API33]**
 
 Modes:
 
@@ -57,9 +57,9 @@ You can set which Wi-Fi you can connect or which Wi-Fi you can't connect
 
 ## Private DNS
 
-Require Device owner
+**[Device owner]**
 
-Require API 29 or above
+**[API29]**
 
 You can set private DNS mode to auto
 
@@ -67,21 +67,21 @@ You can also specify a DNS hostname
 
 ## Network log 
 
-Require Device owner or Profile owner of work profile
+**[Device owner] [Work profile]**
+
+**[API26]**
 
 Use this function in work profile will only retrieve network logs in work profile
 
 There shouldn't be unaffiliated user on this device if used by Device owner
 
-Require API26 or above
-
 TODO
 
 ## Wi-Fi keypair
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API33 or above
+**[API33]**
 
 Add or remove Wi-Fi keypair
 
@@ -89,7 +89,7 @@ Add or remove Wi-Fi keypair
 
 ## APN settings
 
-Require Device owner
+**[Device owner]**
 
 Require API28 or above
 

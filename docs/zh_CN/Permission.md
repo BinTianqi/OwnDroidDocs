@@ -132,51 +132,56 @@ dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 ## 设备信息
 
 ### 设备策略管理器角色
+
 DPMRH: Device policy manager role holder
 
 ### 加密状态
+
 有以下5种状态：不支持、未使用、正在使用、正在使用（默认密钥）、正在使用（每个用户分别加密）
 
 ### 支持设备ID认证
+
 如果支持密钥证明和设备ID证明，返回true
 
 ### 支持唯一设备认证
+
 如果设备上的StrongBox Keymaster可以配置单独的证明证书并且可以使用该证书签署证明记录，则返回true（只有StrongBox安全级别的Keymaster才能使用单独的证明证书进行证明）
 
 ### 激活的Device admin
+
 一个已激活的Device admin的列表
 
 ## 设备唯一标识码
 
-需API31或以上
+**[API31]**
 
 需要先设置[组织ID](ManagedProfile#组织ID)，不同组织ID的唯一标识码不同，恢复出厂设置不变
 
 ## 组织名称
 
-需API26或以上
+**[Device owner] [Profile owner]**
 
-需要Device owner或Profile owner
+**[API26]**
 
 设置组织名称后会在一些地方显示*此设备归xxx所有*
 
 ## 不受控制的账号类型
 
-需Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 作用未知
 
 ## 锁屏信息
 
-需API24或以上
+**[Device owner] [Profile owner]**
 
-需要Device owner或Profile owner
+**[API24]**
 
 在锁屏界面上显示的一段简短的消息
 
 ## 提供支持的长/短消息
 
-需API24或以上
+**[API24]**
 
 如果用户试图使用被挂起的应用或被禁用的功能，会显示提供支持的短消息（默认的消息：请联系IT管理员）
 
@@ -184,9 +189,9 @@ DPMRH: Device policy manager role holder
 
 ## 转移所有权
 
-需要Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API28或以上
+**[API28]**
 
 转移设备所有权到另外一个Device owner或Profile owner
 

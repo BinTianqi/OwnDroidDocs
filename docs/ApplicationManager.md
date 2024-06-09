@@ -4,9 +4,9 @@ A Profile owner of a managed profile can only manage apps in work profile
 
 A Profile owner of a managed user can only manage apps in the managed user
 
-All actions require a package name except install app
+All actions except install app require a package name
 
-Get all installed packages via this command
+You can get all installed packages via this command
 
 ```shell
 pm list packages
@@ -18,29 +18,29 @@ Jump to detail of this app
 
 ## Suspend
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API24 or above
+**[API24]**
 
 Suspend an app. This app's icon will become gray, and you cannot launch it.
 
 ## Hide
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 Completely hide this app. You cannot find this app in any way, `pm list packages` won't list this app as well.
 
 ## Always-on VPN
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API24 or above
+**[API24]**
 
 The target app must support this feature.
 
 ## Disable uninstall
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 You are not able to uninstall this app in any way.
 
@@ -48,15 +48,13 @@ Disable uninstall globally: [UserRestriction->Application](UserRestriction#Appli
 
 ## Disable user control
 
-Require Device owner or Profile owner
-
-Require API30 or above if OwnDroid is a Device owner, require API33 or above if OwnDroid is a Profile owner
+**[Device owner(API30)] [Profile owner(API33)]**
 
 You cannot clear this app's storage or force stop this app in app details.
 
 ## Permission manage
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 List all supported permissions via this command
 
@@ -80,21 +78,21 @@ From API31，Profile owner can no longer modify sensor permissions
 
 ## Cross profile apps
 
-Require Profile owner in work profile
+**[Work profile]**
 
-Require API30 or above
+**[API30]**
 
 Allow an app interact across profiles. The target app must support it (GBoard supports it). 
 
 ## Cross profile widget provider
 
-Require Profile owner of work profile
+**[Work profile]**
 
 Use widget that provided by work profile apps is main user
 
 ## Credential manage policy
 
-Require Device owner
+**[Device owner]**
 
 Require API34 or above
 
@@ -102,7 +100,7 @@ TODO
 
 ## Permitted accessibility service & IME
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 Modes: 
 
@@ -114,34 +112,34 @@ System accessibility service and IME is always permitted
 
 ## Keep uninstalled app
 
-Require Device owner
+**[Device owner]**
 
-Require API28 or above
+**[API28]**
 
 Android system will keep APKs of apps in this list after they uninstalled 
 
 ## Clear app storage
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API28 or above
+**[API28]**
 
 Clear an app's storage and cache
 
 ## Default dialer app
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API34 or above
+**[API34]**
 
 Set an app as the default dialer
 
 ## Uninstall app
 
-- Silent uninstall (Require Device owner)
+- Silent uninstall **[Device owner]**
 - Request uninstall
 
 ## Install app
 
-- Silent install (Require Device owner)
+- Silent install **[Device owner]**
 - Request install

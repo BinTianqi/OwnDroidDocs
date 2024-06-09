@@ -10,11 +10,11 @@ pm list users
 
 - Is User unlocked
 - Support multiple users
-- System user (Require API23 or above)
+- **[API23]** System user
 - Admin user. An admin user can create and remove users, there can be more than 1 admin user on your device
-- Headless system user. System services run in headless system user, but this user isn't assign to anyone. (Require API31 or above)
+- **[API31]** Headless system user. System services run in headless system user, but this user isn't assign to anyone.
 - User can log out. TODO
-- Ephemeral user. An ephemeral user will be removed after log out or reboot (Require API28)
+- **[API28]** Ephemeral user. An ephemeral user will be removed after log out or reboot
 - Affiliated user. Please view [Affiliated ID](#Affiliated ID)
 - UserID. UserID is not UID. The UserID of system user is 0
 - User serial number. The user serial number of system user is 0
@@ -23,11 +23,11 @@ pm list users
 
 It is recommended to specify a user with serial number, you can also use UID, the UID should be any of the apps in the target user
 
-- Log out current user (Require Profile owner of a managed user)
+- Log out current user **[Profile owner(managed user)]**
 
 You should input a valid user serial number or UID before use these functions
 
-Require Device owner
+**[Device owner]**
 
 - Start user in background (Require API28 or above)
 - Switch to user
@@ -36,16 +36,16 @@ Require Device owner
 
 ## Create user
 
-Require Device owner
+**[Device owner]**
 
-Require API24 or above
+**[API24]**
 
 Create a managed user
 
 Options:
 
 - Skip wizard
-- Ephemeral user (Require API28 or above)
+- **[API28]** Ephemeral user
 - Enable all system apps (Some system apps are disabled by default, such as YouTube)
 
 Android system will install another OwnDroid in the managed user while creating it
@@ -58,9 +58,9 @@ You can create a managed user on WearOS, but do not switch to it, or you will ge
 
 ## Affiliated ID
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-You can set multiple IDs in the affiliated ID set
+You can set multiple IDs in the affiliated ID list
 
 When Device owner create a managed user, the managed user isn't affiliated. In order to make the managed user affiliated with the Device owner, you should set  same affiliated IDs in main user and managed user
 
@@ -70,17 +70,19 @@ Go to [User info](#User info) to see if the current user is affiliated
 
 ## Edit username
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 ## Change user icon
 
-Select a picture and set the icon of current user
+**[Device owner] [Profile owner]**
 
-Require Device owner or Profile owner
+**[API23]**
 
-Require API23 or above
+Select a picture and set the picture as icon of current user
 
 ## User session message
+
+**[Device owner]**
 
 Start user session message: this message will show when you switch to other user
 

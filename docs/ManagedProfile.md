@@ -32,11 +32,11 @@ You can create a work profile on WearOS. But you need a 3rd party launcher to la
 
 ## Organization-owned profile
 
-Require API30 or above
+**[Work profile]**
+
+**[API30]**
 
 Use all work profile features with org-owned profile permission
-
-Require Profile owner
 
 It is recommended to activate org-owned profile with [Shizuku](Permission#Shizuku)
 
@@ -51,13 +51,13 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 ## Suspend personal apps
 
-Require Profile owner of org-owned work profile
+**[Work profile(Org)]**
 
 All personal apps except system apps and OwnDroid will be suspended
 
 ## Profile maximum time off
 
-Require Profile owner of work profile
+**[Work profile]**
 
 Personal apps will be suspended if work profile keep off in this time limit
 
@@ -65,15 +65,15 @@ This time limit cannot lower than 72 hours
 
 ## Cross profile intent filter
 
-Require Profile owner of work profile
+**[Work profile]**
 
 As default, intents will be filtered if some app send it across profiles. Add exception rules to allow this intents
 
 ## Organization ID
 
-Require Profile owner of Work profile
+**[Work profile]**
 
-Require API31 or above
+**[API31]**
 
 The length of this ID should between 4 and 64
 

@@ -1,36 +1,38 @@
 # 网络
 
-这个页面需要API24或以上的Device owner或Profile owner才能进入
+**[Device owner] [Profile owner]**
+
+**[API24]**
 
 ## Wi-Fi Mac地址
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+**[Device owner] [工作资料（组织）]**
 
-需要API24或以上
+**[API24]**
 
 得到的是设备真实的Wi-Fi Mac地址，不是用于连接当前Wi-Fi的随机Mac地址
 
 ## 优先网络服务
 
-需要的权限：Device owner
+**[Device owner]**
 
-需要API33或以上
+**[API33]**
 
 功能开发中
 
 ## Wi-Fi锁定
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+**[Device owner] [工作资料（组织）]**
 
-需要API30或以上
+**[API30]**
 
 作用未知
 
 ## 要求最小Wi-Fi安全等级
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+**[Device owner] [工作资料（组织）]**
 
-需要API33或以上
+**[API33]**
 
 选项：
 
@@ -43,9 +45,9 @@
 
 ## Wi-Fi SSID策略
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+**[Device owner] [工作资料（组织）]**
 
-需要API33或以上
+**[API33]**
 
 模式：
 
@@ -57,9 +59,9 @@
 
 ## 私人DNS
 
-需要的权限：Device owner
+**[Device owner]**
 
-需要API29或以上
+**[API29]**
 
 可以将私人DNS模式设为自动
 
@@ -67,21 +69,21 @@
 
 ## 网络日志记录
 
-需要的权限：Device owner或工作资料的Profile owner
+**[Device owner] [工作资料]**
+
+**[API26]**
 
 工作资料中使用此功能只会记录工作资料的网络日志
 
 如果被Device owner使用，设备上不能有非附属用户
 
-需要API26或以上
-
-功能开发中，所以现在使用收集不到任何内容
+功能开发中
 
 ## Wi-Fi密钥对
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API31或以上
+**[API31]**
 
 可以添加或移除Wi-Fi密钥对
 
@@ -89,9 +91,9 @@
 
 ## APN设置
 
-需要的权限：Device owner
+**[Device owner]**
 
-需要API28或以上
+**[API28]**
 
-我没用过这个功能，因为我不懂APN。如果这个功能存在问题，请打开一个issue
+我没用过这个功能，因为我不懂APN。如果这个功能能用或者不能用，请打开一个issue
 

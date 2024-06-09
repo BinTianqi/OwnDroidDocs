@@ -1,8 +1,8 @@
 # User restriction
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API24 or above
+**[API24]**
 
 Profile owner can't disable some features. Some features have no effect in work profile
 

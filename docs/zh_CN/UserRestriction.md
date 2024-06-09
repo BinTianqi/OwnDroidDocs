@@ -1,14 +1,14 @@
 # 用户限制
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
+
+**[API24]**
 
 Profile owner无法禁用部分功能，工作资料中部分功能无效，wearOS部分功能无效
 
 minSDK是使用这个功能所需要的最低API等级
 
 打开开关就是禁用对应的功能，默认情况下所有开关都是关闭的
-
-所有的用户限制都需要API24或以上
 
 ## 网络与互联网
 

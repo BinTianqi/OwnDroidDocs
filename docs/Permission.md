@@ -112,7 +112,7 @@ Functions:
 - Activate [Device admin](#device-admin)
 - Activate [Profile owner](#profile-owner)
 - Activate [Device owner](#device-owner)
-- Activate [Organization owned profile](ManagedProfile#由组织拥有的工作资料)
+- Activate [Organization owned profile](ManagedProfile#Organization owned profile)
 - List Device owner and Profile owner
 
 ## Device info
@@ -139,35 +139,37 @@ A list of activated Device admin
 
 ## Device specific ID
 
-Require API31 or above
+**[API31]**
 
-[Organization ID](ManagedProfile#组织ID) must be set in order to get device specific ID. Different organization ID has different device specific ID. Device specific ID won't reset when factory reset.
+[Organization ID](ManagedProfile#Organization ID) must be set in order to get device specific ID. Different organization ID has different device specific ID. Device specific ID won't reset when factory reset.
 
 ## Organization name
 
-Require API26 or above
+**[Device owner] [Profile owner]**
 
-Require Device owner or Profile owner
+**[API26]**
 
 Set the name of your company
 
 ## Account types with management disabled
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 TODO
 
 ## Lock screen info
 
-Require API24 or above
+**[Device owner] [Profile owner]**
 
-Require Device owner or Profile owner
+**[API24]**
 
 Show a brief message on your lock screen
 
 ## Supported message
 
-Require API24 or above
+TODO
+
+**[API24]**
 
 When you try to use a feature that disabled by OwnDroid, you will see the short support message
 
@@ -175,9 +177,9 @@ Long support message seems useless
 
 ## Transform Ownership
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API28 or above
+**[API28]**
 
 Transform Device owner or Profile owner privilege to another app
 

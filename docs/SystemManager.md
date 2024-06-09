@@ -4,37 +4,37 @@
 
 ### Disable camera
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 ### Disable screenshot
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 This will also disable screen record
 
 ### Hide status bar
 
-Require Device owner or Profile owner of an affiliated
+**[Device owner] [Profile owner(Affiliated)]**
 
-Require API34 or above
+**[API34]**
 
-All icons on the status bar will be hided, and you cannot pull down 
+All icons on the status bar will be hided, and you cannot pull down the status bar
 
 ### Auto time
 
-Require Device owner or Profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
 
-Require API30 or above
+**[API30]**
 
 ### Auto timezone
 
-Require Device owner or Profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
 
-Require API30 or above
+**[API30]**
 
 ### Auto time (Deprecated)
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 Deprecated from API 30
 
@@ -42,45 +42,45 @@ From API31, OwnDroid won't show this feature
 
 ### Master mute
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 ### Backup service
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API26 or above
+**[API26]**
 
 ### Disable bluetooth contacts sharing
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API23 or above
+**[API23]**
 
 ### Common criteria mode
 
-Require Device owner
+**[Device owner] [Profile owner]**
 
-Require API30 or above
+**[API30]**
 
 ### USB signal
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API31 or above
+**[API31]**
 
 Some device Don't support this feature
 
 ## Lock screen
 
+**[Device owner] [Profile owner]**
+
+**[API28]**
+
 Disable or enable lock screen
-
-Require Device owner or Profile owner
-
-Require API28 or above
 
 ## Lock now
 
-Require Device admin
+**[Device admin]**
 
 Option: 
 
@@ -90,25 +90,25 @@ You are always required to enter your password to unlock your device if you lock
 
 ## Request bug report
 
-Require API24 or above
+**[Device owner]**
 
-Require Device owner
+**[API24]**
 
 ## Reboot
 
-Require API24 or above
+**[Device owner]**
 
-Require Device owner
+**[API24]**
 
 ## Edit time
 
-Input milliseconds from Epoch(1970/1/1 00:00:00 UTC) to your target time
+**[Device owner] [Work profile(Org)]**
 
-Require Device owner or Profile owner of org-owned profile
+Input milliseconds from Epoch(1970/1/1 00:00:00 UTC) to your target time
 
 ## Edit timezone
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 You can view all available timezone ID in OwnDroid
 
@@ -116,7 +116,7 @@ Turn off [Auto timezone](#Auto timezone) before use this function
 
 ## Permission policy
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 When an app ask for a runtime permission
 
@@ -126,11 +126,13 @@ When an app ask for a runtime permission
 
 ## MTE policy
 
+**[Device owner] [Profile owner]**
+
+**[API34]**
+
+Require ARMv9 SoC
+
 [MTE](https://developer.android.com/ndk/guides/arm-mte): Memory Tagging Extension
-
-Require API34 and a ARMv9 SoC
-
-Require Device owner
 
 Modes:
 
@@ -140,9 +142,9 @@ Modes:
 
 ## Nearby share policy
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
-Require API31 or above
+**[API31]**
 
 Modes:
 
@@ -155,9 +157,9 @@ TODO
 
 ## Lock task mode
 
-Require Device owner
+**[Device owner]**
 
-Require API28 or above
+**[API28]**
 
 Modes:
 
@@ -173,7 +175,7 @@ Modes:
 
 ## Ca certificate
 
-Require Device owner or Profile owner
+**[Device owner] [Profile owner]**
 
 Select a CA cert, then
   - View if the certificate is installed
@@ -184,17 +186,17 @@ Select a CA cert, then
 
 ## Security logs
 
-Require Device owner or Profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
+
+**[API24]**
 
 If a Device owner use this function, all users should be affiliated
-
-Require API24 or above
 
 TODO
 
 ## System update policy
 
-Require Device owner
+**[Device owner]**
 
 View if there is a pending system update
 
@@ -207,7 +209,7 @@ System update policy:
 
 ## Install system update
 
-Require Device owner or Profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
 
 A `DeadSystemException` may appear
 
@@ -215,7 +217,7 @@ A `DeadSystemException` may appear
 
 FRP: Factory reset protection
 
-Require Device owner or Profile owner of org-owned profile
+**[Device owner] [Work profile(Org)]**
 
 To enable this feature, the device must support persistent data block service
 
@@ -229,8 +231,6 @@ Use with extreme caution
 
 :::
 
-Require Device admin
-
 Options:
 
 - Wipe external storage
@@ -240,8 +240,8 @@ Options:
 
 Actions:
 
-- WipeData
-- WipeDevice（Require API34 or above, require Device owner of Profile owner of org-owned profile）
+- WipeData. **[Device admin]**
+- WipeDevice. **[API34]** **[Device owner] [Work profil(Org)]**
 
 Reason: Require API28 or above, should be used with WipeData
 

@@ -14,7 +14,7 @@
 
 选项：
 
-- 跳过加密（需要API24或以上，没有实际作用）
+- **[API24]** 跳过加密 (TODO)
 
 创建后工作资料中的OwnDroid会成为Profile owner
 
@@ -24,11 +24,11 @@
 
 ## 由组织拥有的工作资料
 
-需要API30或以上
+**[工作资料]**
+
+**[API30]**
 
 成为由组织拥有的工作资料后可以使用更多功能
-
-需要的权限：工作资料中的Profile owner
 
 你需要在工作资料中的OwnDroid的“用户管理”页面中查看UserID（通常为10），然后执行下面这个ADB命令
 
@@ -41,13 +41,13 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 ## 挂起个人应用
 
-需要的权限：由组织拥有的工作资料的Profile owner
+**[工作资料（组织）]**
 
 只会挂起个人的用户应用，系统应用和OwnDroid仍然可以打开
 
 ## 资料最长关闭时间
 
-需要的权限：工作资料的Profile owner
+**[工作资料]**
 
 用户可以关闭工作资料，如果关闭工作资料的时间超过了在这里设置的时间，会挂起个人应用
 
@@ -55,7 +55,7 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 ## 跨资料Intent过滤器
 
-需要的权限：工作资料的Profile owner
+**[工作资料]**
 
 默认情况下，工作资料中的应用不能打开个人应用，个人应用也不可以打开工作资料中的应用
 
@@ -63,9 +63,9 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 ## 组织ID
 
-需要的权限：工作资料的Profile owner
+**[工作资料]**
 
-需要API31或以上
+**[API31]**
 
 组织ID长度需在6~64个字符之间
 

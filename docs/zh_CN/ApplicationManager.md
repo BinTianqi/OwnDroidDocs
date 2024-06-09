@@ -16,29 +16,29 @@ pm list packages
 
 ## 挂起
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API24或以上
+**[API24]**
 
 挂起应用，应用图标变为灰色，打开时会提示被IT管理员限制
 
 ## 隐藏
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 深度隐藏。`pm list packages`都看不到隐藏的应用。无法卸载隐藏的应用，因为找不到。
 
 ## VPN保持打开
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API24或以上
+**[API24]**
 
 需要应用支持VPN保持打开
 
 ## 防卸载
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 用户无法在应用详情卸载应用，也不能使用`adb uninstall`和`pm uninstall`命令卸载
 
@@ -46,15 +46,13 @@ pm list packages
 
 ## 禁止用户控制
 
-需要的权限： Device owner或Profile owner
-
-如果是Device owner，需要API30或以上，如果是Profile owner，需要API33或以上
+**[Device owner(API30)] [Profile owner(API33)]**
 
 用户无法清除这些应用的存储空间，也无法强制停止应用，OwnDroid中的[清除应用存储](#清除应用存储)不受影响
 
 ## 权限管理
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 使用这个ADB命令查看系统支持的所有权限
 
@@ -78,29 +76,29 @@ pm list permissions
 
 ## 跨资料应用
 
-需要的权限：工作资料的Profile owner
+**[工作资料]**
 
-需要API30或以上
+**[API30]**
 
 设置跨工作资料的应用，需要目标应用支持跨资料（比如GBoard）
 
 ## 跨资料微件
 
-需要的权限：工作资料的Profile owner
+**[工作资料]**
 
 设置跨工作资料的桌面小部件提供者
 
 ## 凭据管理策略
 
-需要的权限：Device owner
+**[Device owner]**
 
-需要API34或以上
+**[API34]**
 
 作用未知
 
 ## 许可的无障碍服务&输入法
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 模式：
 
@@ -112,34 +110,34 @@ pm list permissions
 
 ## 卸载后保留的应用
 
-需要Device owner
+**[Device owner]**
 
-需要API28或以上
+**[API28]**
 
 这个列表中的应用的APK将会一直保留，即使没有任何用户安装这个应用
 
 ## 清除应用存储
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API28或以上
+**[API28]**
 
 清除应用的存储空间
 
 ## 默认拨号应用
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API34或以上
+**[API34]**
 
 没有测试过
 
 ## 卸载应用
 
-- 静默卸载（需要Device owner，否则没反应）
+- 静默卸载 **[Device owner]**
 - 请求卸载
 
 ## 安装应用
 
-- 静默安装（需要Device owner，否则没反应）
+- 静默安装 **[Device owner]**
 - 请求安装

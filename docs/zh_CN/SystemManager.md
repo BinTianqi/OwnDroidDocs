@@ -4,71 +4,71 @@
 
 ### 禁用相机
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 ### 禁止截屏
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 也会禁止AOSP自带的录屏
 
 ### 隐藏状态栏
 
-需要的权限：Device owner或附属用户的Profile owner
+**[Device owner] [Profile owner(附属)]**
 
-需要API34或以上
+**[API34]**
 
 状态栏仍会显示时间和系统图标，但是通知图标会隐藏，并且状态栏不能下拉
 
 ### 自动设置时间
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+**[Device owner] [工作资料（组织）]**
 
-需要API30或以上
+**[API30]**
 
 默认打开
 
 ### 自动设置时区
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+**[Device owner] [工作资料（组织）]**
 
-需要API30或以上
+**[API30]**
 
 默认打开
 
 ### 自动设置时间（弃用）
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 自从API30开始弃用，在API30或以上的设备上，此功能不会显示
 
 ### 全局静音
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 ### 备份服务
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API26或以上
+**[API26]**
 
 ### 禁止蓝牙分享联系人
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API23或以上
+**[API23]**
 
 ### 通用标准模式
 
-需要的权限：Device owner
+**[Device owner]**
 
-需要API30或以上
+**[API30]**
 
 ### USB信号
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+**[Device owner] [工作资料（组织）]**
 
-需要API31或以上
+**[API31]**
 
 有的设备不支持
 
@@ -76,41 +76,41 @@
 
 ## 锁屏方式
 
+**[Device owner] [Profile owner（附属）]**
+
+**[API28]**
+
 禁用和启用锁屏方式，需要无锁屏密码
-
-需要的权限：Device owner或附属用户的Profile owner
-
-需要API28或以上
 
 ## 立即锁屏
 
-选项：重新输入密码（需API26或以上）
+**[Device admin]**
 
-需要的权限：Device admin
+选项：重新输入密码 **[API26]**
 
 无论勾不勾选这个选项，解锁时都需要重新输入密码
 
 ## 请求错误报告
 
-需要API24或以上
+**[Device owner]**
 
-需要的权限：Device owner
+**[API24]**
 
 ## 重启
 
-需要API24或以上
+**[Device owner]**
 
-需要的权限：Device owner
+**[API24]**
 
 ## 修改时间
 
-输入从Epoch(1970/1/1 00:00:00 UTC)到你想设置的时间(毫秒)
+**[Device owner] [工作资料（组织）]**
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+输入从Epoch(1970/1/1 00:00:00 UTC)到你想设置的时间(毫秒)
 
 ## 修改时区
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
 可以查看所有时区ID
 
@@ -118,21 +118,23 @@
 
 ## 权限策略
 
+**[Device owner] [Profile owner]**
+
 当应用请求权限时执行的操作
 
 - 默认（由用户决定）
 - 自动允许
 - 自动拒绝
 
-需要的权限：Device owner或Profile owner
-
 ## MTE策略
+
+**[Device owner]**
+
+**[API34]**
 
 MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](https://developer.android.google.cn/ndk/guides/arm-mte?hl=zh-cn)
 
-需要安卓14和Armv9
-
-需要的权限：Device owner
+需要ARMv9的SoC
 
 选项：
 
@@ -142,9 +144,9 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 ## 附近App共享&附近通知共享
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-需要API31或以上
+**[API31]**
 
 选项：
 
@@ -155,9 +157,9 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 ## 锁定任务模式
 
-需要的权限：Device owner
+**[Device owner]**
 
-需要API28或以上
+**[API28]**
 
 选项：
 
@@ -169,13 +171,13 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
   - 允许打开后台应用概览
   - 允许全局行为（比如长按电源键的对话框）
   - 允许锁屏（如果不允许，即使有密码也不会锁屏）
-  - 阻止启动未允许的应用（阻止白名单应用启动非白名单应用，需要API30）
+  - **[API30]** 阻止启动未允许的应用（阻止白名单应用启动非白名单应用）
 
 ## Ca证书
 
-需要的权限：Device owner或Profile owner
+**[Device owner] [Profile owner]**
 
-- 选择一个证书（一般是*.0）
+- 选择一个证书（.0文件）
 
   - 查看这个证书是否已安装
   - 安装这个证书
@@ -185,17 +187,17 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 ## 安全日志&&重启前安全日志
 
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
+**[Device owner] [工作资料（组织）]**
+
+**[API24]**
 
 如果被Device owner使用，设备上不能有非附属用户，否则不会有输出
-
-需要API24或以上
 
 这个功能正在开发中
 
 ## 系统更新策略
 
-需要的权限：Device owner
+**[Device owner]**
 
 查看待安装的更新是否安全补丁
 
@@ -208,7 +210,7 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 ## 安装系统更新
 
-需要的权限：Device owner或由组织拥有的工作资料
+**[Device owner] [工作资料（组织）]**
 
 可能会出现`DeadSystemException`
 
@@ -216,11 +218,11 @@ MTE: Memory Tagging Extension（内存标记拓展）[安卓开发者：MTE](htt
 
 ## FRP策略
 
+**[Device owner] [工作资料（组织）]**
+
 FRP: Factory reset protection
 
 恢复出厂设置保护策略
-
-需要的权限：Device owner或由组织拥有的工作资料的Profile owner
 
 需要设备支持持久数据块服务(persistent data block service)
 
@@ -231,22 +233,22 @@ FRP用于防止不受信任的重置。简单来说，当FRP启用时，通过Re
 ## 清除数据
 
 ::: danger
-危险功能，谨慎使用
-:::
 
-需要的权限：Device admin
+危险功能，谨慎使用
+
+:::
 
 选项：
 
 - 清除外部存储
-- 清除受保护的数据（仅Device owner）
+- 清除受保护的数据 **[Device owner]**
 - 清除eUICC
 - 静默清除（不会向用户显示原因）
 
 方法：
 
-- WipeData
-- WipeDevice（需要API34或以上，需要Device owner或由组织拥有的工作资料的Profile owner）
+- WipeData **[Device admin]**
+- **[API34]** WipeDevice **[Device owner] [工作资料（组织）]**
 
 恢复出厂原因：需要API28或以上，只有WipeData能用
 
