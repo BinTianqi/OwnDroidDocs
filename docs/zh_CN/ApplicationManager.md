@@ -90,11 +90,17 @@ pm list permissions
 
 ## 凭据管理策略
 
-**[Device owner]**
+**[Device owner] [工作资料]**
 
 **[API34]**
 
-作用未知
+模式：
+
+- 白名单
+- 白名单和系统
+- 黑名单
+
+决定哪些应用可以使用[CredentialManager](https://developer.android.google.cn/reference/kotlin/android/credentials/CredentialManager.html)类。一般用不着
 
 ## 许可的无障碍服务&输入法
 

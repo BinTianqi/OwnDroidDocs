@@ -13,7 +13,7 @@ pm list users
 - **[API23]** System user
 - Admin user. An admin user can create and remove users, there can be more than 1 admin user on your device
 - **[API31]** Headless system user. System services run in headless system user, but this user isn't assign to anyone.
-- User can log out. TODO
+- User can log out. TODO: remove from user info, create a SwitchItem
 - **[API28]** Ephemeral user. An ephemeral user will be removed after log out or reboot
 - Affiliated user. Please view [Affiliated ID](#Affiliated ID)
 - UserID. UserID is not UID. The UserID of system user is 0

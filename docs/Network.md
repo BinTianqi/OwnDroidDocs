@@ -12,11 +12,9 @@ This will show you the actual Wi-Fi Mac address of your device, not the randomiz
 
 ## Preferential network service
 
-**[Device owner]**
+**[Device owner(API33)] [Work profile(API31)]**
 
-**[API33]**
-
-TODO
+TODO: show entrance when work profile
 
 ## Wi-Fi lockdown
 
@@ -24,7 +22,7 @@ TODO
 
 **[API30]**
 
-TODO
+TODO: complete description
 
 ## Minimum Wi-Fi security level
 
@@ -65,7 +63,9 @@ You can set private DNS mode to auto
 
 You can also specify a DNS hostname
 
-## Network log 
+## Network log
+
+This function is not available now
 
 **[Device owner] [Work profile]**
 
@@ -75,6 +75,8 @@ Use this function in work profile will only retrieve network logs in work profil
 
 There shouldn't be unaffiliated user on this device if used by Device owner
 
+Network logs contain DNS lookup and connect() library call events.
+
 TODO
 
 ## Wi-Fi keypair
@@ -83,9 +85,11 @@ TODO
 
 **[API33]**
 
-Add or remove Wi-Fi keypair
+Add Wi-Fi authenticating keypair
 
-[TODO]
+Useless for most people
+
+TODO: update strings, catch IllegalArgumentException
 
 ## APN settings
 

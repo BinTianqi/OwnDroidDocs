@@ -25,7 +25,6 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 - 此应用的”权限“界面中停用
 - 安卓设置中停用
-- ~~ADB命令停用~~（参考Device owner的ADB命令停用）
 
 ## Profile owner
 
@@ -37,20 +36,12 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 ### 激活
 
-- 使用ADB激活（不推荐，如果能使用ADB，建议激活Device owner）
-- Shizuku（本质上还是ADB激活）
 - [创建工作资料](ManagedProfile#创建工作资料)，OwnDroid会成为工作资料中的Profile owner
 - 成为Device owner后创建并管理用户，此应用会成为新用户的Profile owner，每个用户各有一个Profile owner
 
-ADB激活命令：
-
-```shell
-dpm set-profile-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
-```
+极不推荐在主用户激活Profile owner
 
 ### 停用
-
-主用户：”权限“界面中停用~~或ADB停用~~
 
 工作资料：”设备控制“界面中的”清除数据“，会删除工作资料
 
@@ -62,18 +53,14 @@ dpm set-profile-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 ### 激活
 
-- 使用ADB激活
-- Shizuku（本质上还是ADB激活）
-- 恢复出厂设置并开机后，使用NFC发送这个app的下载链接（没试过）
-- 使用Root权限往/data/system里面放一个xml文件（可以无视当前存在的用户和账号，没试过）
+- ADB
+- Shizuku
 
 ADB激活命令：
 
 ```shell
 dpm set-device-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 ```
-
-ADB激活有一定局限性
 
 激活前必须删除所有用户（user），否则会报错。你可以使用下面这条ADB命令查看已有的用户
 
@@ -87,35 +74,30 @@ pm list users
 dumpsys account
 ```
 
-上面两个是安卓系统的限制，此外，还有设备生产商的限制
+::: info MIUI
 
-MIUI：需要在开发者选项中打开”USB调试（安全设置）“
+需要在开发者选项中打开`USB调试（安全设置）`
 
-ColorOS：请使用testKey的apk，否则只能使用Device admin和工作资料中的Profile owner
+:::
 
-小天才电话手表（Android 8.1）：完全不支持Device owner
+::: info ColorOS
+
+请使用testKey的apk，否则只能使用Device admin和工作资料中的Profile owner
+
+:::
+
+::: info CaremeOS
+
+不支持Device owner
+
+:::
 
 ### 停用
 
 - 恢复出厂设置（比较彻底）
 - 在“权限”页面停用（推荐）
-- ADB命令停用（麻烦）
 
-ADB命令停用十分麻烦，你需要修改AndroidManifest.xml并自己编译项目。
-
-你需要把AndroidManifest.xml中的`android:testOnly="false"`的值改为true
-
-签名校验问题请自己解决
-
-然后，使用这条ADB命令停用
-
-```shell
-dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
-```
-
-使用这条命令也可以停用Device admin和Profile owner
-
-以上三种方法停用Device owner都会同时停用Device admin
+以上两种方法停用Device owner都会同时停用Device admin
 
 ## Shizuku
 
@@ -165,11 +147,11 @@ DPMRH: Device policy manager role holder
 
 设置组织名称后会在一些地方显示*此设备归xxx所有*
 
-## 不受控制的账号类型
+## 禁用账号控制
 
 **[Device owner] [Profile owner]**
 
-作用未知
+不能添加或移除被禁用控制的账号
 
 ## 锁屏信息
 
@@ -183,9 +165,9 @@ DPMRH: Device policy manager role holder
 
 **[API24]**
 
-如果用户试图使用被挂起的应用或被禁用的功能，会显示提供支持的短消息（默认的消息：请联系IT管理员）
+如果用户试图使用被禁用的功能，会显示提供支持的短消息
 
-提供支持的长消息不知道有啥用
+在Device admin设置中会显示长消息
 
 ## 转移所有权
 

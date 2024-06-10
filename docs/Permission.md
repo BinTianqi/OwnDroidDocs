@@ -19,7 +19,6 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 - In OwnDroid
 - Android Settings -> Security -> More -> Device admin apps
-- Command (Not recommended)
 
 ## Profile owner
 
@@ -29,16 +28,10 @@ Profile owner can exist in main user, work profile and managed user
 
 ### Activate
 
-- Command
-- Shizuku
-- [Create work profile](ManagedProfile#Create work profile). OwnDroid will become the profile owner in the work profile
-- Create managed users after activate Device owner, OwnDroid will become the profile owner in managed users 
+- [Create work profile](ManagedProfile#Create work profile)
+- [Create managed user](UserManager#Create user)
 
-Command:
-
-```shell
-dpm set-profile-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
-```
+Activate a Profile owner in main user is not recommended.
 
 ### Deactivate
 
@@ -95,7 +88,6 @@ Please use OwnDroid APK signed with testkey
 
 - Factory reset
 - Deactivate in OwnDroid
-- Command (TODO)
 
 ```shell
 dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
@@ -151,11 +143,13 @@ A list of activated Device admin
 
 Set the name of your company
 
-## Account types with management disabled
+## Disable account management
 
 **[Device owner] [Profile owner]**
 
-TODO
+When account management is disabled for an account type, adding or removing an account of that type will not be possible.
+
+TODO: update strings in app (this dosen't mean uncontrolled account types)
 
 ## Lock screen info
 
@@ -167,13 +161,19 @@ Show a brief message on your lock screen
 
 ## Supported message
 
-TODO
+**[Device admin]**
 
 **[API24]**
 
-When you try to use a feature that disabled by OwnDroid, you will see the short support message
+### Short support message
 
-Long support message seems useless
+This will be displayed to the user in settings screens where functionality has been disabled by the admin.
+If the message is longer than 200 characters it may be truncated
+
+### Long support message
+
+This will be displayed to the user in the device administrators settings screen.
+If the message is longer than 20000 characters it may be truncated.
 
 ## Transform Ownership
 

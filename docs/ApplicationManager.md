@@ -38,6 +38,8 @@ Completely hide this app. You cannot find this app in any way, `pm list packages
 
 The target app must support this feature.
 
+TODO: open another page for this feature in app
+
 ## Disable uninstall
 
 **[Device owner] [Profile owner]**
@@ -92,11 +94,19 @@ Use widget that provided by work profile apps is main user
 
 ## Credential manage policy
 
-**[Device owner]**
+**[Device owner] [Work profile]**
 
 Require API34 or above
 
-TODO
+Modes:
+
+- Allowlist
+- Allowlist and system
+- Blocklist
+
+This policy controls which apps can use [CredentialManager](https://developer.android.com/reference/kotlin/android/credentials/CredentialManager.html) class. Useless for most people
+
+TODO: update strings in app
 
 ## Permitted accessibility service & IME
 

@@ -18,7 +18,7 @@ You can only use numeric PIN on WearOS platform. Don't set an alphabetic passwor
 
 - Is password complexity sufficient. If the current password complexity match the required password complexity
 
-- Password failed attempts. If you can see it, the value should be 0 (TODO)
+- Password failed attempts. **[Device admin]** TODO: update permission in app
 
 - **[API28]** Unified password. true if the work profile and main user use a same password
 
@@ -78,19 +78,21 @@ If you attempt wrong password that reach this limit, all data on your device wil
 
 ## Password history length
 
-**[Device owner]**
+**[Device admin]**
 
-TODO
+The user will not be able to enter a new password that is the same as any password in the history. 
+
+TODO: update permission in app
 
 ## Required strong auth timeout
 
-TODO
+**[Device owner] [Profile owner]**
 
-You must use strong auth (password, PIN or pattern) to unlock your device if you didn't use them in this timeout
+**[API26]**
 
-Minimum 1 hour, maximum 72 hours
+Determine for how long the user will be able to use secondary, non strong auth for authentication, since last strong method authentication (password, pin or pattern) was used. After the returned timeout the user is required to use strong authentication method.
 
-0 means use system default timeout
+A value of 0 means the admin is not participating in controlling the timeout. The minimum and maximum timeouts are platform-defined and are typically 1 hour and 72 hours, respectively.
 
 ## Required password complexity
 
@@ -109,11 +111,11 @@ Weak password: passwords such as 1234, 6666
 
 You can jump to Settings to set a new password by click _Request to set a new password_
 
-## Keyguard features
+## Disable keyguard feature
 
-**[Device owner] [Profile owner]**
+**[Device admin]**
 
-TODO
+TODO: update strings in app, show entrance when device admin
 
 Modes: 
 
@@ -130,10 +132,10 @@ Custom features:
 - Disable trust agents
 - Disable fingerprint unlock
 - Disable remote input (Deprecated)
-- Disable face unlock (Require API28 or above)
-- Disable iris unlock (Require API28 or above)
-- Disable biometric unlock (Require API28 or above)
-- Disable shortcuts (Require API34 or above)
+- **[API28]** Disable face unlock
+- **[API28]** Disable iris unlock
+- **[API28]** Disable biometric unlock
+- **[API34]** Disable shortcuts
 
 ## Require password quality
 

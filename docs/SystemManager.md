@@ -140,7 +140,7 @@ Modes:
 - Enabled
 - Disabled
 
-## Nearby share policy
+## Nearby streaming policy
 
 **[Device owner] [Profile owner]**
 
@@ -153,7 +153,11 @@ Modes:
 - Disabled
 - Same managed account only
 
-TODO
+App streaming is when the device starts an app on a virtual display and sends a video stream of the app to nearby devices.
+
+Notification streaming is sending notification data from pre-installed apps to nearby devices.
+
+TODO: update strings in app
 
 ## Lock task mode
 
@@ -186,11 +190,17 @@ Select a CA cert, then
 
 ## Security logs
 
+This function is not available now
+
 **[Device owner] [Work profile(Org)]**
 
 **[API24]**
 
 If a Device owner use this function, all users should be affiliated
+
+Security logs contain various information intended for security auditing purposes
+
+Not all devices support pre-reboot security logs
 
 TODO
 
