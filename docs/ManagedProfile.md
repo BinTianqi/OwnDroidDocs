@@ -12,7 +12,7 @@ As default, [Install from unknown source](UserRestriction#Application) will be d
 
 :::
 
-## Create work profile
+<h2 id="CreateWorkProfile">Create work profile</h2>
 
 Require no Device owner or Profile owner is set
 
@@ -30,7 +30,7 @@ You can create a work profile on WearOS. But you need a 3rd party launcher to la
 
 :::
 
-## Organization-owned profile
+<h2 id="OrgOwnedProfile">Organization-owned profile</h2>
 
 **[Work profile]**
 
@@ -40,7 +40,7 @@ Use all work profile features with org-owned profile permission
 
 It is recommended to activate org-owned profile with [Shizuku](Permission#Shizuku)
 
-First, get the UserID of your work profile in [UserManager -> User info](UserManager#User info)
+First, get the UserID of your work profile in [UserManager -> User info](UserManager#UserInfo)
 
 Then execute this command
 
@@ -69,7 +69,7 @@ This time limit cannot lower than 72 hours
 
 As default, intents will be filtered if some app send it across profiles. Add exception rules to allow this intents
 
-## Organization ID
+<h2 id="OrgID">Organization ID</h2>
 
 **[Work profile]**
 
@@ -79,9 +79,9 @@ The length of this ID should between 4 and 64
 
 You can view [Specific ID](Permission#Specific ID) if you set organization ID
 
-## Remove work profile
+<h2 id="RemoveWorkProfile">Remove work profile</h2>
 
-Go to [SystemManager -> Wipe Data](SystemManager#Wipe data) in OwnDroid of work profile
+Go to [SystemManager -> Wipe Data](SystemManager#WipeData) in OwnDroid of work profile
 
 If org-owned profile is not activated, you can remove work profile in Android Settings -> Security -> More -> Device admin apps
 

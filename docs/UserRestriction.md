@@ -77,7 +77,7 @@ Turn on a switch means disable that function
 |   24   | Set user icon |
 |        | Cross profile copy |
 |   28   | Share into managed profile |
-|   28   | Unified password (view [Password info](Password#Password info))|
+|   28   | Unified password (view [Password info](Password#PasswordInfo))|
 
 ## Other
 

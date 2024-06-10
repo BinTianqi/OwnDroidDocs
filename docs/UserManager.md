@@ -6,7 +6,7 @@ This command will return a list of all users on your device. The number before u
 pm list users
 ```
 
-## User info
+<h2 id="UserInfo">User info</h2>
 
 - Is User unlocked
 - Support multiple users
@@ -15,7 +15,7 @@ pm list users
 - **[API31]** Headless system user. System services run in headless system user, but this user isn't assign to anyone.
 - User can log out. TODO: remove from user info, create a SwitchItem
 - **[API28]** Ephemeral user. An ephemeral user will be removed after log out or reboot
-- Affiliated user. Please view [Affiliated ID](#Affiliated ID)
+- Affiliated user. Please view [Affiliated ID](#AffiliatedID)
 - UserID. UserID is not UID. The UserID of system user is 0
 - User serial number. The user serial number of system user is 0
 
@@ -34,7 +34,7 @@ You should input a valid user serial number or UID before use these functions
 - Stop user
 - Remove user
 
-## Create user
+<h2 id="CreateUser">Create user</h2>
 
 **[Device owner]**
 
@@ -56,7 +56,7 @@ You can create a managed user on WearOS, but do not switch to it, or you will ge
 
 :::
 
-## Affiliated ID
+<h2 id="AffiliatedID">Affiliated ID</h2>
 
 **[Device owner] [Profile owner]**
 
@@ -66,7 +66,7 @@ When Device owner create a managed user, the managed user isn't affiliated. In o
 
 Device owner is always affiliated with the device
 
-Go to [User info](#User info) to see if the current user is affiliated
+Go to [User info](#UserInfo) to see if the current user is affiliated
 
 ## Edit username
 

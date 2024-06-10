@@ -28,8 +28,8 @@ Profile owner can exist in main user, work profile and managed user
 
 ### Activate
 
-- [Create work profile](ManagedProfile#Create work profile)
-- [Create managed user](UserManager#Create user)
+- [Create work profile](ManagedProfile#CreateWorkProfile)
+- [Create managed user](UserManager#CreateUser)
 
 Activate a Profile owner in main user is not recommended.
 
@@ -37,7 +37,7 @@ Activate a Profile owner in main user is not recommended.
 
 Main user: Deactivate in OwnDroid
 
-Work profile: [Remove work profile](ManagedProfile#Remove work profile)
+Work profile: [Remove work profile](ManagedProfile#RemoveWorkProfile)
 
 Managed user: Remove that user
 
@@ -104,7 +104,7 @@ Functions:
 - Activate [Device admin](#device-admin)
 - Activate [Profile owner](#profile-owner)
 - Activate [Device owner](#device-owner)
-- Activate [Organization owned profile](ManagedProfile#Organization owned profile)
+- Activate [Organization owned profile](ManagedProfile#OrgOwnedProfile)
 - List Device owner and Profile owner
 
 ## Device info
@@ -133,7 +133,7 @@ A list of activated Device admin
 
 **[API31]**
 
-[Organization ID](ManagedProfile#Organization ID) must be set in order to get device specific ID. Different organization ID has different device specific ID. Device specific ID won't reset when factory reset.
+[Organization ID](ManagedProfile#OrgID) must be set in order to get device specific ID. Different organization ID has different device specific ID. Device specific ID won't reset when factory reset.
 
 ## Organization name
 

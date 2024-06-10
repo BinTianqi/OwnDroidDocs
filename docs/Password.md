@@ -12,9 +12,9 @@ You can only use numeric PIN on WearOS platform. Don't set an alphabetic passwor
 
 :::
 
-## Password info
+<h2 id="PasswordInfo">Password info</h2>
 
-- **[API29]** Current password complexity. Please view [Required password complexity](#Required password complexity)
+- **[API29]** Current password complexity. Please view [Required password complexity](#RequiredPasswordComplexity)
 
 - Is password complexity sufficient. If the current password complexity match the required password complexity
 
@@ -94,7 +94,7 @@ Determine for how long the user will be able to use secondary, non strong auth f
 
 A value of 0 means the admin is not participating in controlling the timeout. The minimum and maximum timeouts are platform-defined and are typically 1 hour and 72 hours, respectively.
 
-## Required password complexity
+<h2 id="RequiredPasswordComplexity">Required password complexity</h2>
 
 **[Device owner] [Profile owner]**
 

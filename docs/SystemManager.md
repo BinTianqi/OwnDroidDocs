@@ -233,7 +233,7 @@ To enable this feature, the device must support persistent data block service
 
 FRP can protect the device after untrusted factory reset (in recovery or fastboot)
 
-## Wipe data
+<h2 id="WipeData">Wipe data</h2>
 
 ::: danger
 
