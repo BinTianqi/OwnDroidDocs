@@ -1,6 +1,6 @@
 # Application manager
 
-A Profile owner of a managed profile can only manage apps in work profile
+A Profile owner of a work profile can only manage apps in work profile
 
 A Profile owner of a managed user can only manage apps in the managed user
 
@@ -12,9 +12,9 @@ You can get all installed packages via this command
 pm list packages
 ```
 
-## App detail
+## App details
 
-Jump to detail of this app
+Jump to details of this app
 
 ## Suspend
 
@@ -22,13 +22,25 @@ Jump to detail of this app
 
 **[API24]**
 
-Suspend an app. This app's icon will become gray, and you cannot launch it.
+A suspended package will not be able to start activities. Its notifications will be hidden, it will not show up in recents, will not be able to show toasts or dialogs or ring the device.
+
+Some apps cannot be suspended, such as device admins, the active launcher and the default dialer.
 
 ## Hide
 
 **[Device owner] [Profile owner]**
 
-Completely hide this app. You cannot find this app in any way, `pm list packages` won't list this app as well.
+When a package is hidden it is unavailable for use, but the data and actual package file remain.
+
+::: warning 
+
+Please keep the hidden apps' package name in your mind! You need them to unhide the hidden apps.
+
+::: info
+You can't list hidden apps in any way! You can't even list hidden packages with `pm list packages` command
+TODO: how to find hidden apps
+
+:::
 
 ## Always-on VPN
 
@@ -36,33 +48,41 @@ Completely hide this app. You cannot find this app in any way, `pm list packages
 
 **[API24]**
 
-The target app must support this feature.
+Configure an always-on VPN connection through a specific application for the current user. This connection is automatically granted and persisted after a reboot.
 
 TODO: open another page for this feature in app
 
-## Disable uninstall
+## Block uninstall
 
 **[Device owner] [Profile owner]**
 
-You are not able to uninstall this app in any way.
+Change whether a user can uninstall a package.
 
-Disable uninstall globally: [UserRestriction->Application](UserRestriction#Application)
+::: info
+
+You cannot uninstall a uninstall-blocked app via adb or shell command
+
+:::
+
+::: tip
+
+Block uninstall globally: [UserRestriction->Application](UserRestriction#Application)
+
+:::
+
+TODO: check strings in app
 
 ## Disable user control
 
 **[Device owner(API30)] [Profile owner(API33)]**
 
-You cannot clear this app's storage or force stop this app in app details.
+User will not be able to clear app data or force-stop packages.
 
 ## Permission manage
 
 **[Device owner] [Profile owner]**
 
-List all supported permissions via this command
-
-```shell
-pm list permissions
-```
+Sets the grant state of a runtime permission for a specific application. 
 
 There are 3 statuses of a permission:
 
@@ -70,13 +90,29 @@ There are 3 statuses of a permission:
 - Denied
 - Decided by user
 
-If the status is granted or denied, you cannot change this permission of this app via `pm grant` or `pm revoke` or in Settings.
+If the status is granted or denied, you cannot change this permission of this app in Settings.
 
-Change the status from granted or denied to decided by user, the actual permission status will not change
-
-This can only modify runtime permissions
+Setting the grant state to default does not revoke the permission. It retains the previous grant, if any.
 
 From API31，Profile owner can no longer modify sensor permissions
+
+TODO: check strings in app, decided by user should be "default"
+
+::: info
+
+If the status of a permission is granted or denied, you cannot grant or revoke it via `pm grant` and `pm revoke` command
+
+:::
+
+::: tip
+
+Use this shell command to list all supported permissions on your device
+
+```shell
+pm list permissions
+```
+TODO: list only runtime permissions
+:::
 
 ## Cross profile apps
 
@@ -84,13 +120,21 @@ From API31，Profile owner can no longer modify sensor permissions
 
 **[API30]**
 
-Allow an app interact across profiles. The target app must support it (GBoard supports it). 
+Set the set of admin-allowlisted package names that are allowed to request user consent for cross-profile communication.
+
+::: info
+
+After you whitelist an app here, you need to enable cross-profile communication in app details if the app doesn't ask you for this permission.
+
+Few apps support this function. As I only know, GBoard supports this function.
+
+:::
 
 ## Cross profile widget provider
 
 **[Work profile]**
 
-Use widget that provided by work profile apps is main user
+You can use widgets that provided by work profile apps in main user
 
 ## Credential manage policy
 
@@ -106,8 +150,6 @@ Modes:
 
 This policy controls which apps can use [CredentialManager](https://developer.android.com/reference/kotlin/android/credentials/CredentialManager.html) class. Useless for most people
 
-TODO: update strings in app
-
 ## Permitted accessibility service & IME
 
 **[Device owner] [Profile owner]**
@@ -116,9 +158,9 @@ Modes:
 
 - Allow all
 - Allow only system apps
-- Allow system apps and 3rd party apps in a list 
+- Allow system apps and some specific apps
 
-System accessibility service and IME is always permitted
+System accessibility services and IMEs are always available to the user and this method can't disable them.
 
 ## Keep uninstalled app
 
@@ -126,7 +168,7 @@ System accessibility service and IME is always permitted
 
 **[API28]**
 
-Android system will keep APKs of apps in this list after they uninstalled 
+Set a list of apps to keep around as APKs even if no user has currently installed it. 
 
 ## Clear app storage
 
@@ -136,13 +178,21 @@ Android system will keep APKs of apps in this list after they uninstalled
 
 Clear an app's storage and cache
 
+::: info
+
+An application can store data outside of its application data, e.g. external storage or user dictionary. This data will not be wiped by calling this API.
+
+:::
+
 ## Default dialer app
 
-**[Device owner] [Profile owner]**
+**[Device owner] [Work profile(Org)]**
 
 **[API34]**
 
 Set an app as the default dialer
+
+TODO: update permissions in app
 
 ## Uninstall app
 

@@ -10,19 +10,21 @@ All functions there require API24 or above, Device owner or Profile owner. If no
 
 This will show you the actual Wi-Fi Mac address of your device, not the randomized Mac
 
-## Preferential network service
+## Options
+
+### Preferential network service
 
 **[Device owner(API33)] [Work profile(API31)]**
 
 TODO: show entrance when work profile
 
-## Wi-Fi lockdown
+### Lockdown admin configured network
 
 **[Device owner] [Work profile(Org)]**
 
 **[API30]**
 
-TODO: complete description
+Determine whether the user is prevented from modifying networks configured by the admin.
 
 ## Minimum Wi-Fi security level
 
@@ -89,7 +91,7 @@ Add Wi-Fi authenticating keypair
 
 Useless for most people
 
-TODO: update strings, catch IllegalArgumentException
+TODO: catch IllegalArgumentException
 
 ## APN settings
 

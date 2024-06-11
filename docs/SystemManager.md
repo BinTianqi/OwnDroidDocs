@@ -157,8 +157,6 @@ App streaming is when the device starts an app on a virtual display and sends a 
 
 Notification streaming is sending notification data from pre-installed apps to nearby devices.
 
-TODO: update strings in app
-
 ## Lock task mode
 
 **[Device owner]**

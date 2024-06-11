@@ -18,7 +18,7 @@ You can only use numeric PIN on WearOS platform. Don't set an alphabetic passwor
 
 - Is password complexity sufficient. If the current password complexity match the required password complexity
 
-- Password failed attempts. **[Device admin]** TODO: update permission in app
+- Password failed attempts. **[Device admin]**
 
 - **[API28]** Unified password. true if the work profile and main user use a same password
 
@@ -80,9 +80,7 @@ If you attempt wrong password that reach this limit, all data on your device wil
 
 **[Device admin]**
 
-The user will not be able to enter a new password that is the same as any password in the history. 
-
-TODO: update permission in app
+The user will not be able to enter a new password that is the same as any password in the history.
 
 ## Required strong auth timeout
 
@@ -111,11 +109,9 @@ Weak password: passwords such as 1234, 6666
 
 You can jump to Settings to set a new password by click _Request to set a new password_
 
-## Disable keyguard feature
+## Disable keyguard features
 
 **[Device admin]**
-
-TODO: update strings in app, show entrance when device admin
 
 Modes: 
 

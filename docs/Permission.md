@@ -149,8 +149,6 @@ Set the name of your company
 
 When account management is disabled for an account type, adding or removing an account of that type will not be possible.
 
-TODO: update strings in app (this dosen't mean uncontrolled account types)
-
 ## Lock screen info
 
 **[Device owner] [Profile owner]**
