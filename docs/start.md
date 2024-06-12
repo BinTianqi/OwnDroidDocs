@@ -10,3 +10,10 @@ English docs are not complete. Please go to [简体中文](zh_CN/start)
 
 1. Profile owner and Device owner have very high privilege, use with caution
 2. All commands should be run in `adb shell` environment. Please enter ADB shell first, do not `adb shell xxx`
+
+::: info
+
+There are some TODOs in the docs. Don't care it. It's for the developer's use.
+
+:::
+

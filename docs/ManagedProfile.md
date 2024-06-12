@@ -71,6 +71,8 @@ As default, intents will be filtered if some app send it across profiles. Add ex
 
 <h2 id="OrgID">Organization ID</h2>
 
+TODO: move this function to Permissions
+
 **[Work profile]**
 
 **[API31]**

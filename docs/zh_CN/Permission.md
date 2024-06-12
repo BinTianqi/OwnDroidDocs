@@ -19,7 +19,11 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 一个设备可以同时存在多个Device admin。
 
-小天才电话手表（Android 8.1）使用ADB激活Device admin会返回"Success"，但是实际上没有效果
+::: info CaremeOS
+
+在CaremeOS中，使用ADB激活Device admin会返回"Success"，但是不会激活Device admin
+
+:::
 
 ### 停用
 
@@ -94,10 +98,9 @@ dumpsys account
 
 ### 停用
 
-- 恢复出厂设置（比较彻底）
-- 在“权限”页面停用（推荐）
+- 在“权限”页面停用
 
-以上两种方法停用Device owner都会同时停用Device admin
+停用Device owner时会同时停用Device admin
 
 ## Shizuku
 
@@ -115,7 +118,7 @@ dumpsys account
 
 ### 设备策略管理器角色
 
-DPMRH: Device policy manager role holder
+DPMRH: Device policy management role holder
 
 ### 加密状态
 
@@ -134,6 +137,8 @@ DPMRH: Device policy manager role holder
 一个已激活的Device admin的列表
 
 ## 设备唯一标识码
+
+**[Device owner] [Profile owner]**
 
 **[API31]**
 
@@ -155,19 +160,27 @@ DPMRH: Device policy manager role holder
 
 ## 锁屏信息
 
-**[Device owner] [Profile owner]**
+**[Device owner] [工作资料（组织）]**
 
 **[API24]**
 
 在锁屏界面上显示的一段简短的消息
 
-## 提供支持的长/短消息
+将会覆盖用户当前设置的锁屏信息，并且防止用户在系统设置中设置新的锁屏信息
+
+## 提供支持的消息
+
+**[Device admin]**
 
 **[API24]**
 
-如果用户试图使用被禁用的功能，会显示提供支持的短消息
+### 提供支持的短消息
 
-在Device admin设置中会显示长消息
+如果用户试图使用被禁用的功能，会显示提供支持的短消息。不能多于200字
+
+### 提供支持的长消息
+
+在Device admin设置中会显示长消息，不能多于20000字
 
 ## 转移所有权
 
@@ -175,7 +188,7 @@ DPMRH: Device policy manager role holder
 
 **[API28]**
 
-转移设备所有权到另外一个Device owner或Profile owner
+转移Device owner或Profile owner权限或到另外一个管理员
 
-目标应用必须是Device admin且支持被转移所有权
+目标应用必须支持转移所有权
 

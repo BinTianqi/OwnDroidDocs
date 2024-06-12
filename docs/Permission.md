@@ -2,7 +2,7 @@
 
 ## Device admin
 
-You can set unlimited Device admins. But device admin can do almost nothing
+You can activate Device admin easily, but Device admin can do almost nothing
 
 ### Activate
 
@@ -22,7 +22,7 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 ## Profile owner
 
-Has a medium-level permission
+A profile owner is a special device admin that has additional privileges within the profile.
 
 Profile owner can exist in main user, work profile and managed user
 
@@ -43,7 +43,7 @@ Managed user: Remove that user
 
 ## Device owner
 
-Has the highest permission
+A device owner app is a special device admin that cannot be deactivated in Settings. It also cannot be uninstalled.
 
 ### Activate
 
@@ -86,12 +86,7 @@ Please use OwnDroid APK signed with testkey
 
 ### Deactivate
 
-- Factory reset
 - Deactivate in OwnDroid
-
-```shell
-dpm remove-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
-```
 
 Device admin permission of OwnDroid will be also removed when you deactivate Device owner
 
@@ -111,7 +106,9 @@ Functions:
 
 ### DPMRH
 
-Device policy manager role holder
+Device policy management role holder
+
+TODO: use management instead manager in app
 
 ### Encryption status
 
@@ -131,9 +128,15 @@ A list of activated Device admin
 
 ## Device specific ID
 
+**[Device owner] [Profile owner]**
+
 **[API31]**
 
-[Organization ID](ManagedProfile#OrgID) must be set in order to get device specific ID. Different organization ID has different device specific ID. Device specific ID won't reset when factory reset.
+Requires [Organization ID](ManagedProfile#OrgID) is set
+
+The identifier would be consistent even if the work profile is removed and create again (to the same Organization ID), or the device is factory reset and re-enrolled.
+
+TODO: update permission in app
 
 ## Organization name
 
@@ -151,17 +154,23 @@ When account management is disabled for an account type, adding or removing an a
 
 ## Lock screen info
 
-**[Device owner] [Profile owner]**
+**[Device owner] [Profile owner(Org)]**
 
 **[API24]**
 
 Show a brief message on your lock screen
+
+Overrides any owner information manually set by the user and prevents the user from further changing it.
+
+TODO: profile owner should be org owned in app
 
 ## Supported message
 
 **[Device admin]**
 
 **[API24]**
+
+TODO: update permission in app
 
 ### Short support message
 
@@ -173,12 +182,14 @@ If the message is longer than 200 characters it may be truncated
 This will be displayed to the user in the device administrators settings screen.
 If the message is longer than 20000 characters it may be truncated.
 
-## Transform Ownership
+## Transfer Ownership
 
 **[Device owner] [Profile owner]**
 
 **[API28]**
 
-Transform Device owner or Profile owner privilege to another app
+TODO: update strings in app, update metadata
 
-The target app must be Device admin and support transform ownership
+Changes the current administrator to another one. All policies from the current administrator are migrated to the new administrator.
+
+The target app must support this feature
