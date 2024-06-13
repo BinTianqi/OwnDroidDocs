@@ -25,7 +25,8 @@ export default defineConfig({
             { text: 'Application manager', link: '/ApplicationManager' },
             { text: 'User restriction', link: '/UserRestriction' },
             { text: 'User manager', link: '/UserManager' },
-            { text: 'Password', link: '/Password' }
+            { text: 'Password', link: '/Password' },
+            { text: 'FAQ', link: '/FAQ' }
           ]
         }
       ]

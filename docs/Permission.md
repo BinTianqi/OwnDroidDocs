@@ -108,8 +108,6 @@ Functions:
 
 Device policy management role holder
 
-TODO: use management instead manager in app
-
 ### Encryption status
 
 There are 5 encryption statuses. Unsupported, inactive, active, active(default key), active(per user) 
@@ -126,7 +124,7 @@ true if the StrongBox Keymaster implementation on the device was provisioned wit
 
 A list of activated Device admin
 
-## Device specific ID
+## Enrollment specific ID
 
 **[Device owner] [Profile owner]**
 
@@ -135,8 +133,6 @@ A list of activated Device admin
 Requires [Organization ID](ManagedProfile#OrgID) is set
 
 The identifier would be consistent even if the work profile is removed and create again (to the same Organization ID), or the device is factory reset and re-enrolled.
-
-TODO: update permission in app
 
 ## Organization name
 
@@ -162,15 +158,11 @@ Show a brief message on your lock screen
 
 Overrides any owner information manually set by the user and prevents the user from further changing it.
 
-TODO: profile owner should be org owned in app
-
 ## Supported message
 
 **[Device admin]**
 
 **[API24]**
-
-TODO: update permission in app
 
 ### Short support message
 
@@ -187,8 +179,6 @@ If the message is longer than 20000 characters it may be truncated.
 **[Device owner] [Profile owner]**
 
 **[API28]**
-
-TODO: update strings in app, update metadata
 
 Changes the current administrator to another one. All policies from the current administrator are migrated to the new administrator.
 

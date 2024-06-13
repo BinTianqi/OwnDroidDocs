@@ -70,8 +70,6 @@ Block uninstall globally: [UserRestriction->Application](UserRestriction#Applica
 
 :::
 
-TODO: check strings in app
-
 ## Disable user control
 
 **[Device owner(API30)] [Profile owner(API33)]**
@@ -88,15 +86,13 @@ There are 3 statuses of a permission:
 
 - Granted
 - Denied
-- Decided by user
+- Default
 
 If the status is granted or denied, you cannot change this permission of this app in Settings.
 
 Setting the grant state to default does not revoke the permission. It retains the previous grant, if any.
 
 From API31，Profile owner can no longer modify sensor permissions
-
-TODO: check strings in app, decided by user should be "default"
 
 ::: info
 
@@ -191,8 +187,6 @@ An application can store data outside of its application data, e.g. external sto
 **[API34]**
 
 Set an app as the default dialer
-
-TODO: update permissions in app
 
 ## Uninstall app
 

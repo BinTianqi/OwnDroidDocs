@@ -25,7 +25,8 @@ export default defineConfig({
             { text: '应用管理', link: '/zh_CN/ApplicationManager' },
             { text: '用户限制', link: '/zh_CN/UserRestriction' },
             { text: '用户管理', link: '/zh_CN/UserManager' },
-            { text: '密码与锁屏', link: '/zh_CN/Password' }
+            { text: '密码与锁屏', link: '/zh_CN/Password' },
+            { text: '常见问题', link: '/zh_CN/FAQ' }
           ]
         }
       ]
