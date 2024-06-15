@@ -6,11 +6,15 @@
 
 **[Device owner] [Profile owner]**
 
-### Disable screenshot
+After setting this, no applications running as this user will be able to access any cameras on the device.
+
+### Disable screen capture
 
 **[Device owner] [Profile owner]**
 
-This will also disable screen record
+Disabling screen capture prevents the content from being shown on display devices that do not have a secure video output.
+
+TODO: screenshot to screen capture in app
 
 ### Hide status bar
 
@@ -18,31 +22,61 @@ This will also disable screen record
 
 **[API34]**
 
-All icons on the status bar will be hided, and you cannot pull down the status bar
+Disabling the status bar blocks notifications and quick settings.
 
-### Auto time
+::: info
+
+This method has no effect for LockTask mode. 
+
+:::
+
+<h2 id="AutoTime">Auto time</h2>
 
 **[Device owner] [Work profile(Org)]**
 
 **[API30]**
 
-### Auto timezone
+::: tip
+
+Enable [Configure date or time](UserRestriction#Other) in User restriction to prevent the user from changing this setting.
+
+:::
+
+<h2 id="AutoTimezone">Auto timezone</h2>
 
 **[Device owner] [Work profile(Org)]**
 
 **[API30]**
+
+::: tip
+
+Enable [Configure date or time](UserRestriction#Other) in User restriction to prevent the user from changing this setting.
+
+:::
 
 ### Auto time (Deprecated)
 
 **[Device owner] [Profile owner]**
 
-Deprecated from API 30
+Deprecated from API 30. From API31, OwnDroid won't show this feature
 
-From API31, OwnDroid won't show this feature
+If auto time is required, no user will be able set the date and time and network date and time will be used.
 
-### Master mute
+::: info
+
+If auto time is required the user can still manually set the time zone. Staring from Android 11, if auto time is required, the user cannot manually set the time zone.
+
+:::
+
+TODO: change auto time to require auto time in app
+
+### Master volume mute
 
 **[Device owner] [Profile owner]**
+
+Set the global volume mute on or off. This has no effect when set on a managed profile.
+
+TODO: update string in app
 
 ### Backup service
 
@@ -50,11 +84,17 @@ From API31, OwnDroid won't show this feature
 
 **[API26]**
 
+Each user has its own backup service which manages the backup and restore mechanisms in that user. Disabling the backup service will prevent data from being backed up or restored.
+
+For a managed user its backup functionality is only enabled if both the device owner and the profile owner have enabled the backup service.
+
 ### Disable bluetooth contacts sharing
 
-**[Device owner] [Profile owner]**
+**[Work profile]**
 
 **[API23]**
+
+TODO: update permission
 
 ### Common criteria mode
 
@@ -62,31 +102,52 @@ From API31, OwnDroid won't show this feature
 
 **[API30]**
 
+When the device is in Common Criteria mode, certain device functionalities are tuned to meet the higher security level required by Common Criteria certification. For example:
+
+- Bluetooth long term key material is additionally integrity-protected with AES-GCM.
+- WiFi configuration store is additionally integrity-protected with AES-GCM.
+
+::: info
+
+If Common Critera mode is turned off after being enabled previously, all existing WiFi configurations will be lost.
+
+:::
+
 ### USB signal
 
 **[Device owner] [Profile owner]**
 
 **[API31]**
 
-Some device Don't support this feature
+Enable or disable USB data signaling for the device. When disabled, USB data connections (except from charging functions) are prohibited.
 
-## Lock screen
+This function is not supported on all devices
 
-**[Device owner] [Profile owner]**
+## Keyguard
+
+**[Device owner] [Profile owner(Affiliated)]**
 
 **[API28]**
 
-Disable or enable lock screen
+Setting the keyguard to disabled has the same effect as choosing "None" as the screen lock type. However, this call has no effect if a password, pin or pattern is currently set. If a password, pin or pattern is set after the keyguard was disabled, the keyguard stops being disabled.
+
+TODO: update strings
 
 ## Lock now
 
 **[Device admin]**
 
-Option: 
+This method secures the device in response to an urgent situation, such as a lost or stolen device. After this method is called, the device must be unlocked using strong authentication (PIN, pattern, or password).
 
-- Require re-enter password (Require API26 or above)
+If there's no lock type set, this method forces the device to go to sleep but doesn't lock the device.
 
-You are always required to enter your password to unlock your device if you lock your device use this function
+### [API26] Evict credential encryption key
+
+Evict the user's credential encryption key from the keyring. The user's credential will need to be entered again in order to derive the credential encryption key that will be stored back in the keyring for future use.
+
+In order to secure user data, the user will be stopped and restarted so apps should wait until they are next run to perform further actions.
+
+TODO: update this option's label in app
 
 ## Request bug report
 
@@ -100,11 +161,15 @@ You are always required to enter your password to unlock your device if you lock
 
 **[API24]**
 
+You can't use this function if there is an ongoing call on the device
+
 ## Edit time
 
 **[Device owner] [Work profile(Org)]**
 
-Input milliseconds from Epoch(1970/1/1 00:00:00 UTC) to your target time
+Input time in milliseconds since the Epoch(1970/1/1 00:00:00 UTC)
+
+[Auto time](#AutoTime) should be disabled before use this function
 
 ## Edit timezone
 
@@ -112,13 +177,13 @@ Input milliseconds from Epoch(1970/1/1 00:00:00 UTC) to your target time
 
 You can view all available timezone ID in OwnDroid
 
-Turn off [Auto timezone](#Auto timezone) before use this function
+[Auto timezone](#AutoTimezone) should be disabled before use this function
 
 ## Permission policy
 
 **[Device owner] [Profile owner]**
 
-When an app ask for a runtime permission
+Set the default response for future runtime permission requests by applications.
 
 - Default (Decided by user)
 - Auto grant
@@ -132,13 +197,15 @@ When an app ask for a runtime permission
 
 Require ARMv9 SoC
 
-[MTE](https://developer.android.com/ndk/guides/arm-mte): Memory Tagging Extension
+Set the Memory Tagging Extension (MTE) policy. MTE is a CPU extension that allows to protect against certain classes of security problems at a small runtime performance cost overhead.
 
 Modes:
 
 - Decided by user
 - Enabled
 - Disabled
+
+The device needs to be rebooted to apply changes to the MTE policy.
 
 ## Nearby streaming policy
 
@@ -173,7 +240,9 @@ Modes:
   - Allow Overview
   - Allow global actions (for example, open power menu)
   - Allow lock screen
-  - Block activity start in task (whitelisted app can't launch other apps, Require API30）
+  - Block activity start in task (whitelisted app can't launch other apps, Require API30)
+
+TODO: enter lock task mode
 
 ## Ca certificate
 
@@ -185,6 +254,12 @@ Select a CA cert, then
   - Uninstall this certificate
 
 - Clear all user certificates
+
+::: info
+
+Inserted user CAs aren't automatically trusted by apps in API24 and higher.
+
+:::
 
 ## Security logs
 
@@ -204,7 +279,7 @@ TODO
 
 ## System update policy
 
-**[Device owner]**
+**[Device owner] [Work profile(Org)]**
 
 View if there is a pending system update
 
@@ -220,6 +295,8 @@ System update policy:
 **[Device owner] [Work profile(Org)]**
 
 A `DeadSystemException` may appear
+
+TODO: Context.getMainExecutor()
 
 ## FRP policy
 
@@ -242,22 +319,22 @@ Use with extreme caution
 Options:
 
 - Wipe external storage
-- Wipe protected data (Require Device owner)
+- Wipe protected data **[Device owner]**
 - Wipe eUICC (eSIM)
 - Wipe silently
 
 Actions:
 
 - WipeData. **[Device admin]**
-- WipeDevice. **[API34]** **[Device owner] [Work profil(Org)]**
+- **[API34]** WipeDevice. **[Device owner] [Work profil(Org)]**
 
-Reason: Require API28 or above, should be used with WipeData
+**[API28]** Reason: should be only used with WipeData
 
 If you use this function in a managed user, all data of that user will be wiped, but that user won't be removed
 
 If you use this function in a work profile, the work profile will be removed
 
-From API334, you can't use WipeData in main user, please use WipeDevice instead
+From API34, you can't use WipeData in main user, please use WipeDevice instead
 
 ::: info AVD
 
