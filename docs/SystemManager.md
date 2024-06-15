@@ -42,7 +42,7 @@ Enable [Configure date or time](UserRestriction#Other) in User restriction to pr
 
 :::
 
-<h2 id="AutoTimezone">Auto timezone</h2>
+<h3 id="AutoTimezone">Auto timezone</h3>
 
 **[Device owner] [Work profile(Org)]**
 

@@ -42,9 +42,9 @@ UserID：不是UID。系统用户的UserID为0，其他用户（包括工作资�
 
 **[Device owner]**
 
-- 在后台启动用户 **[API28]**
+- **[API28]** 在后台启动用户
 - 切换至用户
-- 停止用户**[API28]**
+- **[API28]** 停止用户
 - 移除用户
 
 ## 创建并管理用户
@@ -63,19 +63,11 @@ UserID：不是UID。系统用户的UserID为0，其他用户（包括工作资�
 
 创建后，OwnDroid会成为受管理用户中的Profile owner
 
-::: info 给WearOS用户的提示
+::: info WearOS
 
-这个功能在WearOS上使用会导致SystemUI停止运行一次，过几秒恢复正常。创建用户实际上成功了，回到OwnDroid后能看到新用户的序列号，`pm list users`也能看到新用户。如果切换到新用户，SystemUI无法使用，表现为黑屏（可以用ADB命令启动别的应用）。如果黑屏无法使用，ADB执行下面这个命令（把USER_ID替换成受管理用户的用户序列号）
+在WearOS上可以创建用户，但是不要切换到创建的用户，否则有可能软变砖
 
-```shell
-pm remove-user --set-ephemeral-if-in-use USER_ID
-```
-
-新用户会被设为临时用户，重启后临时用户会被删除并切换到主用户
-
-（原生WearOS4(AVD)会出现这个问题，其他版本不知道有没有这个问题）
-
-TODO clean
+WearOS4(AVD)
 
 :::
 
@@ -91,13 +83,11 @@ Device owner无论在何时都是附属于设备的用户
 
 你可以在用户管理->[用户信息](#用户信息)查看当前用户是否附属用户
 
-## 用户名
+## 修改用户名
 
 **[Device owner] [Profile owner]**
 
-修改当前用户的用户名
-
-## 用户图标
+## 更换用户头像
 
 **[Device owner] [Profile owner]**
 
@@ -110,4 +100,6 @@ Device owner无论在何时都是附属于设备的用户
 用户会话开始消息：切换到非系统用户时的消息
 
 用户会话结束消息：切换回系统用户时的消息
+
+需设置一个简短的消息，超出限制的文字会被舍弃
 

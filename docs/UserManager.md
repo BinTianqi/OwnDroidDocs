@@ -6,6 +6,8 @@ This command will return a list of all users on your device. The number before u
 pm list users
 ```
 
+TODO: add this command to Shizuku
+
 <h2 id="UserInfo">User info</h2>
 
 - Is User unlocked
@@ -29,9 +31,9 @@ You should input a valid user serial number or UID before use these functions
 
 **[Device owner]**
 
-- Start user in background (Require API28 or above)
+- **[API28]** Start user in background
 - Switch to user
-- Stop user
+- **[API28]** Stop user
 - Remove user
 
 <h2 id="CreateUser">Create user</h2>
@@ -68,6 +70,8 @@ Device owner is always affiliated with the device
 
 Go to [User info](#UserInfo) to see if the current user is affiliated
 
+TODO: set affiliated ID automatically
+
 ## Edit username
 
 **[Device owner] [Profile owner]**
@@ -87,4 +91,6 @@ Select a picture and set the picture as icon of current user
 Start user session message: this message will show when you switch to other user
 
 End user session message: this message will show when you switch to system user
+
+The message should be limited to a short statement or it may be truncated.
 

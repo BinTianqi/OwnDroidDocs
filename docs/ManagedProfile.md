@@ -4,11 +4,9 @@ Work profile equals to Managed profile
 
 Work profile is a kind of user, you will see your work profile when you `pm list users`
 
-OwnDroid will hide this feature if Device owner is activated
+::: info
 
-::: tip
-
-As default, [Install from unknown source](UserRestriction#Application) will be disabled in work profile
+[User restriction: Install from unknown source](UserRestriction#Application) is enabled by default
 
 :::
 
@@ -55,19 +53,21 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 All personal apps except system apps and OwnDroid will be suspended
 
+When personal apps are suspended the device can only be used for calls.
+
 ## Profile maximum time off
 
-**[Work profile]**
+**[Work profile(Org)]**
 
-Personal apps will be suspended if work profile keep off in this time limit
+Set maximum time the profile is allowed to be turned off. If the profile is turned off for longer, personal apps are suspended on the device.
 
-This time limit cannot lower than 72 hours
+The minimum non-zero value corresponds to 72 hours. If an admin sets a smaller non-zero vaulue, 72 hours will be set instead.
 
 ## Cross profile intent filter
 
 **[Work profile]**
 
-As default, intents will be filtered if some app send it across profiles. Add exception rules to allow this intents
+Add cross profile intent filters so that some intents sent in the managed profile can also be resolved in the parent, or vice versa. Only activity intents are supported.
 
 <h2 id="OrgID">Organization ID</h2>
 
@@ -83,13 +83,7 @@ You can view [Specific ID](Permission#Specific ID) if you set organization ID
 
 <h2 id="RemoveWorkProfile">Remove work profile</h2>
 
-Go to [SystemManager -> Wipe Data](SystemManager#WipeData) in OwnDroid of work profile
+Go to [SystemManager -> Wipe Data](SystemManager#WipeData) in OwnDroid in work profile
 
 If org-owned profile is not activated, you can remove work profile in Android Settings -> Security -> More -> Device admin apps
 
-You can remove your work profile via this command as well
-
-```shell
-#Replace the USER_ID with your actual UserID
-pm remove-user USER_ID
-```

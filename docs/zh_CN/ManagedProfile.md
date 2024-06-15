@@ -2,9 +2,11 @@
 
 工作资料是一种特殊的用户，使用`pm list user`命令可以看到工作资料，工作资料的默认用户名是“工作资料”或“Work Profile”
 
-如果已经激活了Device owner，会隐藏工作资料的入口
+::: info
 
-工作资料创建后默认禁用[安装未知来源应用](UserRestriction#应用)
+工作资料中默认打开[用户限制：安装未知来源应用](UserRestriction#应用)
+
+:::
 
 ## 创建工作资料
 
@@ -47,7 +49,7 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 ## 资料最长关闭时间
 
-**[工作资料]**
+**[工作资料（组织）]**
 
 用户可以关闭工作资料，如果关闭工作资料的时间超过了在这里设置的时间，会挂起个人应用
 
@@ -57,9 +59,7 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 **[工作资料]**
 
-默认情况下，工作资料中的应用不能打开个人应用，个人应用也不可以打开工作资料中的应用
-
-添加Intent过滤器以允许这些行为
+添加跨资料Intent过滤器，使工作资料中可以发送的指定Intent到主用户，反之亦然。仅支持Activity意图。
 
 ## 组织ID
 
@@ -77,8 +77,3 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 如果你的工作资料不是由组织拥有的，你可以打开安卓设置->安全->更多安全设置->设备管理器->带工作资料图标的OwnDroid->移除工作资料（非原生用户自己找）
 
-你也可以使用ADB命令移除工作资料（把USER_ID替换为工作资料的UserID）
-
-```shell
-pm remove-user USER_ID
-```
