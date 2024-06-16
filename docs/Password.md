@@ -34,7 +34,17 @@ Actions:
 - Set token (If no password is set, the token will be activated automatically)
 - Activate token (Jump to Settings, type your password to activate this token)
 
+The token will remain effective even if the user changes or clears the lockscreen password.
+
+::: warning
+
+~~This token is highly sensitive and should be treated at the same level as user credentials. In particular, NEVER store this token on device in plaintext.~~
+
 The token is hardcoded. It is *114514191981011451419198101145141919810*
+
+TODO: input token manually
+
+:::
 
 ## Reset password
 
@@ -44,8 +54,8 @@ If you set a numeric password that length is 6 or lower, it will set as PIN
 
 Options: 
 
-- Do not ask credentials on boot (Only affect Full-disk-encryption devices)
-- Require entry. Other Device admins are not able to reset password until you use the new password to unlock your device
+- Do not ask credentials on boot **[Device owner]**
+- Require entry. Don't allow other admins to change the password again until the user has entered it.
 
 Actions: 
 
@@ -54,33 +64,44 @@ Actions:
 
 ## Screen timeout
 
-**[Device owner]**
+**[Device admin]**
 
-You can only set a shorter screen timeout in Settings. 
+Set the maximum time for user activity until the device will lock. This limits the length that the user can set.
 
-0 means no restriction
+0 means there is no restriction
 
-## Password timeout
+TODO: update permission
 
-**[Device owner]**
+## Password expiration timeout
 
-If you never change your password during this limit, you will be asked to set a new password
+**[Device admin]**
 
-0 means no restriction
+Restart the countdown for password expiration
+
+0 means there is no restriction
+
+TODO: update strings(en/zh) in app, update permission
 
 ## Max failed passwords for wipe
 
-**[Device owner]**
+**[Device admin]**
 
-If you attempt wrong password that reach this limit, all data on your device will be wiped
+Setting this to a value greater than zero enables a policy that will perform a device or profile wipe after too many incorrect device-unlock passwords have been entered.
 
-0 means use system default setting
+When this policy is set on the system or the main user, the device will be factory reset after too many incorrect password attempts. When set on any other user, only the corresponding user or profile will be wiped.
+
+TODO: update strings in app, update permission
 
 ## Password history length
 
 **[Device admin]**
 
-The user will not be able to enter a new password that is the same as any password in the history.
+Set the length of the password history.
+After setting this, the user will not be able to enter a new password that is the same as any password in the history. Note that the current password will remain until the user has set a new one, so the change does not take place immediately.
+
+0 means there is no restriction
+
+TODO: update zh strings in app, update permission
 
 ## Required strong auth timeout
 
@@ -98,20 +119,24 @@ A value of 0 means the admin is not participating in controlling the timeout. Th
 
 **[API31]**
 
+Sets a minimum password complexity requirement for the user's screen lock. The user is unable to set a password with a lower complexity level.
+
 There are 4 levels of password complexity: 
 
 1. None. No password is required
-2. Low. Allow pattern and weak password
-3. Medium. Weak password is not allowed, the password must be at least 4 digits
-4. High. Weak password is not allowed, the password must be at least 6 digits
-
-Weak password: passwords such as 1234, 6666
+2. Low. Allow pattern and PIN with repeating or ordered sequences
+3. Medium. PIN with no repeating or ordered sequences, length at least 4
+4. High. PIN with no repeating or ordered sequences, length at least 8. Alphabetic and alphanumeric, length at least 6
 
 You can jump to Settings to set a new password by click _Request to set a new password_
 
-## Disable keyguard features
+## Keyguard features
 
 **[Device admin]**
+
+TODO: check strings in app, update permission
+
+Disable keyguard customizations, such as widgets. After setting this, keyguard features will be disabled according to the provided feature list.
 
 Modes: 
 
@@ -137,7 +162,7 @@ Custom features:
 
 **[Device owner] [Profile owner]**
 
-Deprecated from API31. Please use [Required password complexity](#Required password complexity)
+**Deprecated from API31.** Please use [Required password complexity](#RequiredPasswordComplexity)
 
 Quality levels:
 
@@ -149,3 +174,4 @@ Quality levels:
 - Biometrics (weak)
 - Numeric (Complex)
 - Custom (won't support)
+

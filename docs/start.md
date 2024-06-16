@@ -9,7 +9,7 @@ Welcome to OwnDroid docs
 
 ::: info
 
-There are some TODOs in the docs. Don't care it. It's for the developer's use.
+There are some TODOs in the docs. Don't care them. They're for the developer's use.
 
 :::
 
