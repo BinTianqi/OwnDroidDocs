@@ -2,10 +2,6 @@
 
 Welcome to OwnDroid docs
 
-::: warning
-English docs are not complete. Please go to [简体中文](zh_CN/start)
-:::
-
 ## Before you start
 
 1. Profile owner and Device owner have very high privilege, use with caution

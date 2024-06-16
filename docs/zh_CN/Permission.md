@@ -136,14 +136,6 @@ DPMRH: Device policy management role holder
 
 一个已激活的Device admin的列表
 
-## 设备唯一标识码
-
-**[Device owner] [Profile owner]**
-
-**[API31]**
-
-需要先设置[组织ID](ManagedProfile#组织ID)，不同组织ID的唯一标识码不同，恢复出厂设置不变
-
 ## 组织名称
 
 **[Device owner] [Profile owner]**
@@ -151,6 +143,22 @@ DPMRH: Device policy management role holder
 **[API26]**
 
 设置组织名称后会在一些地方显示*此设备归xxx所有*
+
+## 组织ID
+
+**[Device owner] [工作资料]**
+
+**[API31]**
+
+设置组织ID后才能获取设备注册专用ID
+
+## 设备注册专用ID
+
+**[Device owner] [工作资料]**
+
+**[API31]**
+
+需要先设置[组织ID](#组织ID)，不同组织ID的设备注册专用ID不同，恢复出厂设置或删除工作资料后不变
 
 ## 禁用账号控制
 

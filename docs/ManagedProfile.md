@@ -69,18 +69,6 @@ The minimum non-zero value corresponds to 72 hours. If an admin sets a smaller n
 
 Add cross profile intent filters so that some intents sent in the managed profile can also be resolved in the parent, or vice versa. Only activity intents are supported.
 
-<h2 id="OrgID">Organization ID</h2>
-
-TODO: move this function to Permissions
-
-**[Work profile]**
-
-**[API31]**
-
-The length of this ID should between 4 and 64
-
-You can view [Specific ID](Permission#Specific ID) if you set organization ID
-
 <h2 id="RemoveWorkProfile">Remove work profile</h2>
 
 Go to [SystemManager -> Wipe Data](SystemManager#WipeData) in OwnDroid in work profile

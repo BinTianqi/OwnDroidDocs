@@ -61,16 +61,6 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 添加跨资料Intent过滤器，使工作资料中可以发送的指定Intent到主用户，反之亦然。仅支持Activity意图。
 
-## 组织ID
-
-**[工作资料]**
-
-**[API31]**
-
-组织ID长度需在6~64个字符之间
-
-设置组织ID后才能在“权限”页面查看[设备唯一标识码](Permission#设备唯一标识码)。
-
 ## 删除工作资料
 
 你可以在工作资料中使用 [恢复出厂设置](SystemManager#恢复出厂设置) 来删除工作资料

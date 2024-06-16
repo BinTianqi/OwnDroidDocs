@@ -102,6 +102,8 @@ Functions:
 - Activate [Organization owned profile](ManagedProfile#OrgOwnedProfile)
 - List Device owner and Profile owner
 
+TODO: list users, list accounts, show error output
+
 ## Device info
 
 ### DPMRH
@@ -124,15 +126,35 @@ true if the StrongBox Keymaster implementation on the device was provisioned wit
 
 A list of activated Device admin
 
-## Enrollment specific ID
+## Organization name
 
 **[Device owner] [Profile owner]**
 
+**[API26]**
+
+Set the name of your company
+
+<h2 id="OrgID">Organization ID</h2>
+
+**[Device owner] [Work profile]**
+
 **[API31]**
 
-Requires [Organization ID](ManagedProfile#OrgID) is set
+Sets the Enterprise ID. This is a requirement for generating an enrollment-specific ID for the device.
+
+TODO: check permission of this and specific id in app
+
+## Enrollment specific ID
+
+**[Device owner] [Work profile]**
+
+**[API31]**
+
+Requires [Organization ID](#OrgID) is set
 
 The identifier would be consistent even if the work profile is removed and create again (to the same Organization ID), or the device is factory reset and re-enrolled.
+
+TODO: update Chinese name of this in app
 
 ## Organization name
 
