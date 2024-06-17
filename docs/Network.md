@@ -16,7 +16,7 @@ This will show you the actual Wi-Fi Mac address of your device, not the randomiz
 
 **[Device owner(API33)] [Work profile(API31)]**
 
-TODO: show entrance when work profile
+TODO: show entrance when work profile, move this function to a separate page, see DevicePolicyManager#setpreferentialnetworkserviceconfigs
 
 ### Lockdown admin configured network
 
@@ -24,7 +24,10 @@ TODO: show entrance when work profile
 
 **[API30]**
 
-Determine whether the user is prevented from modifying networks configured by the admin.
+Control whether the user can change networks configured by the admin.
+When this lockdown is enabled, the user can still configure and connect to other Wi-Fi networks, or use other Wi-Fi capabilities such as tethering.
+
+TODO: check strings in app，expecially zh
 
 ## Minimum Wi-Fi security level
 
@@ -32,14 +35,17 @@ Determine whether the user is prevented from modifying networks configured by th
 
 **[API33]**
 
-Options:
+Specify the minimum security level required for Wi-Fi networks.
+The device may not connect to networks that do not meet the minimum security level. If the current network does not meet the minimum security level set, it will be disconnected. 
+
+Security levels:
 
 - Open
 - WEP, WPA(2)-PSK
 - WPA-EAP
 - WPA3-192bit
 
-You can't connect Wi-Fis that security level is lower than it
+TODO: update zh strings
 
 ## Wi-Fi SSID policy
 
@@ -47,13 +53,13 @@ You can't connect Wi-Fis that security level is lower than it
 
 **[API33]**
 
+Wi-Fi SSID policy specifies the SSID restriction the network must satisfy in order to be eligible for a connection.
+
 Modes:
 
 - None
 - Blacklist
 - Whitelist
-
-You can set which Wi-Fi you can connect or which Wi-Fi you can't connect
 
 ## Private DNS
 
@@ -63,7 +69,17 @@ You can set which Wi-Fi you can connect or which Wi-Fi you can't connect
 
 You can set private DNS mode to auto
 
-You can also specify a DNS hostname
+### Sets the Private DNS mode to opportunistic
+
+In this mode, the DNS subsystem will attempt a TLS handshake to the network-supplied resolver prior to attempting name resolution in cleartext.
+
+### Sets the Private DNS host
+
+It will perform a connectivity check to the resolver, to ensure it is valid.
+
+In case a VPN is used in conjunction with Private DNS resolver, the Private DNS resolver must be reachable both from within and outside the VPN. Otherwise, the device may lose the ability to resolve hostnames as system traffic to the resolver may not go through the VPN.
+
+TODO: update strings (opportunistic), set host in coroutine
 
 ## Network log
 
@@ -93,10 +109,12 @@ Useless for most people
 
 TODO: catch IllegalArgumentException
 
-## APN settings
+## Override APN settings
 
 **[Device owner]**
 
-Require API28 or above
+**[API28]**
 
 I know nothing about APN and carrier settings, so I can't test this function. If you can use it or you can't use it, open a issue to tell me
+
+TODO: update strings
