@@ -76,6 +76,12 @@ Block uninstall globally: [UserRestriction->Application](UserRestriction#Applica
 
 User will not be able to clear app data or force-stop packages.
 
+::: tip
+
+Disable apps control globally: [User restriction -> Application](UserRestriction#Application)
+
+:::
+
 ## Permission manage
 
 **[Device owner] [Profile owner]**

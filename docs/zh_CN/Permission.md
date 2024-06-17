@@ -1,5 +1,11 @@
 # 权限
 
+::: info CaremeOS
+
+过度精简的CaremeOS无法使用DevicePolicyManager，所以无法使用OwnDroid
+
+:::
+
 ## Device admin
 
 即“设备管理器”
@@ -18,12 +24,6 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 ```
 
 一个设备可以同时存在多个Device admin。
-
-::: info CaremeOS
-
-在CaremeOS中，使用ADB激活Device admin会返回"Success"，但是不会激活Device admin
-
-:::
 
 ### 停用
 
@@ -47,9 +47,9 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 ### 停用
 
-工作资料：”设备控制“界面中的”清除数据“，会删除工作资料
+工作资料：[删除工作资料](ManagedProfile#删除工作资料)
 
-受管理的用户：删除用户即可
+受管理的用户：删除用户
 
 ## Device owner
 
@@ -90,12 +90,6 @@ dumpsys account
 
 :::
 
-::: info CaremeOS
-
-不支持Device owner
-
-:::
-
 ### 停用
 
 - 在“权限”页面停用
@@ -118,17 +112,25 @@ dumpsys account
 
 ### 设备策略管理器角色
 
+**[API33]**
+
 DPMRH: Device policy management role holder
 
 ### 加密状态
+
+**[Device admin]**
 
 有以下5种状态：不支持、未使用、正在使用、正在使用（默认密钥）、正在使用（每个用户分别加密）
 
 ### 支持设备ID认证
 
+**[API28]**
+
 如果支持密钥证明和设备ID证明，返回true
 
 ### 支持唯一设备认证
+
+**[API30]**
 
 如果设备上的StrongBox Keymaster可以配置单独的证明证书并且可以使用该证书签署证明记录，则返回true（只有StrongBox安全级别的Keymaster才能使用单独的证明证书进行证明）
 
@@ -142,7 +144,7 @@ DPMRH: Device policy management role holder
 
 **[API26]**
 
-设置组织名称后会在一些地方显示*此设备归xxx所有*
+设置组织名称后会在一些地方显示“此设备归xxx所有”
 
 ## 组织ID
 

@@ -108,23 +108,33 @@ TODO: list users, list accounts, show error output
 
 ### DPMRH
 
+**[API33]**
+
 Device policy management role holder
 
 ### Encryption status
+
+**[Device admin]**
 
 There are 5 encryption statuses. Unsupported, inactive, active, active(default key), active(per user) 
 
 ### Support device ID attestation
 
+**[API28]**
+
 true if the device supports attestation of device identifiers in addition to key attestation.
 
 ### Support unique device attestation
 
+**[API30]**
+
 true if the StrongBox Keymaster implementation on the device was provisioned with an individual attestation certificate and can sign attestation records using it (only Keymaster with StrongBox security level can use an individual attestation certificate).
 
-### Activated Device admin list
+### Active admins list
 
 A list of activated Device admin
+
+TODO: update string in app
 
 ## Organization name
 

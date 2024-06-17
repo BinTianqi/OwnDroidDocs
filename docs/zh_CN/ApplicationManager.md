@@ -71,6 +71,12 @@ pm list packages
 
 用户无法清除这些应用的存储空间，也无法强制停止应用
 
+::: tip
+
+全局禁止用户控制：[用户限制 -> 应用](UserRestriction#应用)
+
+:::
+
 ## 权限管理
 
 **[Device owner] [Profile owner]**

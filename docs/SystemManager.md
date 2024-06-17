@@ -62,12 +62,6 @@ Deprecated from API 30. From API31, OwnDroid won't show this feature
 
 If auto time is required, no user will be able set the date and time and network date and time will be used.
 
-::: info
-
-If auto time is required the user can still manually set the time zone. Staring from Android 11, if auto time is required, the user cannot manually set the time zone.
-
-:::
-
 TODO: change auto time to require auto time in app
 
 ### Master volume mute

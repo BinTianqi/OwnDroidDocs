@@ -8,8 +8,5 @@ hero:
     - theme: brand
       text: Get started
       link: /start
-    - theme: brand
-      text: 快速开始
-      link: /zh_CN/start
 ---
 
