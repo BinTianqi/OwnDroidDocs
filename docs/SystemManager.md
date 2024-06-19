@@ -14,8 +14,6 @@ After setting this, no applications running as this user will be able to access 
 
 Disabling screen capture prevents the content from being shown on display devices that do not have a secure video output.
 
-TODO: screenshot to screen capture in app
-
 ### Hide status bar
 
 **[Device owner] [Profile owner(Affiliated)]**
@@ -54,23 +52,19 @@ Enable [Configure date or time](UserRestriction#Other) in User restriction to pr
 
 :::
 
-### Auto time (Deprecated)
+### Require auto time
 
 **[Device owner] [Profile owner]**
 
-Deprecated from API 30. From API31, OwnDroid won't show this feature
+**Deprecated from API 30.** From API31, OwnDroid won't show this feature
 
 If auto time is required, no user will be able set the date and time and network date and time will be used.
-
-TODO: change auto time to require auto time in app
 
 ### Master volume mute
 
 **[Device owner] [Profile owner]**
 
 Set the global volume mute on or off. This has no effect when set on a managed profile.
-
-TODO: update string in app
 
 ### Backup service
 
@@ -125,8 +119,6 @@ This function is not supported on all devices
 
 Setting the keyguard to disabled has the same effect as choosing "None" as the screen lock type. However, this call has no effect if a password, pin or pattern is currently set. If a password, pin or pattern is set after the keyguard was disabled, the keyguard stops being disabled.
 
-TODO: update strings
-
 ## Lock now
 
 **[Device admin]**
@@ -140,8 +132,6 @@ If there's no lock type set, this method forces the device to go to sleep but do
 Evict the user's credential encryption key from the keyring. The user's credential will need to be entered again in order to derive the credential encryption key that will be stored back in the keyring for future use.
 
 In order to secure user data, the user will be stopped and restarted so apps should wait until they are next run to perform further actions.
-
-TODO: update this option's label in app
 
 ## Request bug report
 

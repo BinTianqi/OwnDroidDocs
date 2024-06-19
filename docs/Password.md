@@ -80,7 +80,7 @@ Restart the countdown for password expiration
 
 0 means there is no restriction
 
-TODO: update strings(en/zh) in app, update permission
+TODO: update permission
 
 ## Max failed passwords for wipe
 
@@ -90,7 +90,7 @@ Setting this to a value greater than zero enables a policy that will perform a d
 
 When this policy is set on the system or the main user, the device will be factory reset after too many incorrect password attempts. When set on any other user, only the corresponding user or profile will be wiped.
 
-TODO: update strings in app, update permission
+TODO: update permission
 
 ## Password history length
 
@@ -101,7 +101,7 @@ After setting this, the user will not be able to enter a new password that is th
 
 0 means there is no restriction
 
-TODO: update zh strings in app, update permission
+TODO: update permission
 
 ## Required strong auth timeout
 
@@ -134,7 +134,7 @@ You can jump to Settings to set a new password by click _Request to set a new pa
 
 **[Device admin]**
 
-TODO: check strings in app, update permission
+TODO: update permission
 
 Disable keyguard customizations, such as widgets. After setting this, keyguard features will be disabled according to the provided feature list.
 

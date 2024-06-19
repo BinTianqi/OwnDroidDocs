@@ -27,8 +27,6 @@ TODO: show entrance when work profile, move this function to a separate page, se
 Control whether the user can change networks configured by the admin.
 When this lockdown is enabled, the user can still configure and connect to other Wi-Fi networks, or use other Wi-Fi capabilities such as tethering.
 
-TODO: check strings in app，expecially zh
-
 ## Minimum Wi-Fi security level
 
 **[Device owner] [Work profile(Org)]**
@@ -44,8 +42,6 @@ Security levels:
 - WEP, WPA(2)-PSK
 - WPA-EAP
 - WPA3-192bit
-
-TODO: update zh strings
 
 ## Wi-Fi SSID policy
 
@@ -79,7 +75,7 @@ It will perform a connectivity check to the resolver, to ensure it is valid.
 
 In case a VPN is used in conjunction with Private DNS resolver, the Private DNS resolver must be reachable both from within and outside the VPN. Otherwise, the device may lose the ability to resolve hostnames as system traffic to the resolver may not go through the VPN.
 
-TODO: update strings (opportunistic), set host in coroutine
+TODO: set host in coroutine
 
 ## Network log
 
@@ -117,4 +113,3 @@ TODO: catch IllegalArgumentException
 
 I know nothing about APN and carrier settings, so I can't test this function. If you can use it or you can't use it, open a issue to tell me
 
-TODO: update strings

@@ -132,9 +132,7 @@ true if the StrongBox Keymaster implementation on the device was provisioned wit
 
 ### Active admins list
 
-A list of activated Device admin
-
-TODO: update string in app
+A list of active Device admin
 
 ## Organization name
 
@@ -163,8 +161,6 @@ TODO: check permission of this and specific id in app
 Requires [Organization ID](#OrgID) is set
 
 The identifier would be consistent even if the work profile is removed and create again (to the same Organization ID), or the device is factory reset and re-enrolled.
-
-TODO: update Chinese name of this in app
 
 ## Organization name
 
