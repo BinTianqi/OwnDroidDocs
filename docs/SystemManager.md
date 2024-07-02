@@ -119,7 +119,9 @@ This function is not supported on all devices
 
 Setting the keyguard to disabled has the same effect as choosing "None" as the screen lock type. However, this call has no effect if a password, pin or pattern is currently set. If a password, pin or pattern is set after the keyguard was disabled, the keyguard stops being disabled.
 
-## Lock now
+<h2 id="LockNow">Lock screen now</h2>
+
+TODO: separate this feature
 
 **[Device admin]**
 
