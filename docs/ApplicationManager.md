@@ -37,6 +37,7 @@ When a package is hidden it is unavailable for use, but the data and actual pack
 Please keep the hidden apps' package name in your mind! You need them to unhide the hidden apps.
 
 ::: info
+
 You can't list hidden apps in any way! You can't even list hidden packages with `pm list packages` command
 TODO: how to find hidden apps
 
@@ -50,7 +51,9 @@ TODO: how to find hidden apps
 
 Configure an always-on VPN connection through a specific application for the current user. This connection is automatically granted and persisted after a reboot.
 
-TODO: open another page for this feature in app
+Option: 
+
+- Enable lockdown: Disallow networking when the VPN is not connected
 
 ## Block uninstall
 

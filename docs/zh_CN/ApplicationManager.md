@@ -47,6 +47,10 @@ pm list packages
 
 通过一个指定的app，为当前用户设置一个保持打开的VPN连接。自动授权连接并在重启后保留
 
+选项：
+
+- 启用锁定：如果VPN未连接，则禁止使用网络
+
 ## 防卸载
 
 **[Device owner] [Profile owner]**
