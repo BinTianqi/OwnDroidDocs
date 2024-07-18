@@ -26,7 +26,7 @@ export default defineConfig({
             { text: 'User restriction', link: '/UserRestriction' },
             { text: 'User manager', link: '/UserManager' },
             { text: 'Password', link: '/Password' },
-            { text: 'Automation', link: '/Automation' },
+            { text: 'Automation API', link: '/AutomationAPI' },
             { text: 'FAQ', link: '/FAQ' }
           ]
         }
