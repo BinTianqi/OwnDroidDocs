@@ -214,7 +214,7 @@ Notification streaming is sending notification data from pre-installed apps to n
 
 **[API28]**
 
-Modes:
+### Lock task features
 
 - Disable all
 - Custom
@@ -226,7 +226,13 @@ Modes:
   - Allow lock screen
   - Block activity start in task (whitelisted app can't launch other apps, Require API30)
 
-TODO: enter lock task mode
+### Lock task packages
+
+Only packages in lock task packages list can start lock task mode
+
+### Start lock task mode
+
+Enter a app's package name and start lock task mode
 
 ## Ca certificate
 
