@@ -62,10 +62,3 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 **[工作资料]**
 
 添加跨资料Intent过滤器，使工作资料中可以发送的指定Intent到主用户，反之亦然。仅支持Activity意图。
-
-## 删除工作资料
-
-你可以在工作资料中使用[恢复出厂设置](SystemManager#恢复出厂设置)来删除工作资料
-
-如果你的工作资料不是由组织拥有的，你可以打开安卓设置->安全->更多安全设置->设备管理器->带工作资料图标的OwnDroid->移除工作资料
-

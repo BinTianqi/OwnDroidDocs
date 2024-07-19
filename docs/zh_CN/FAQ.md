@@ -30,3 +30,13 @@
 你需要在开发者选项中打开`USB调试（安全设置）`
 
 使用root权限执行激活命令可以忽略这个限制
+
+## 获取支持
+
+**Telegram:**
+- 频道: [OwnDroid](https://t.me/owndroid_channel)
+- 讨论群: [OwnDroid discussion](https://t.me/owndroid_discussion)
+- CI构建: [OwnDroid CI](https://t.me/owndroid_ci)
+
+**QQ:**
+- 安卓设备管理员权限交流群：914579017 （非官方，非OwnDroid讨论群）

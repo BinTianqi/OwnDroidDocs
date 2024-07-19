@@ -236,7 +236,7 @@ Only packages in lock task packages list can start lock task mode
 
 Enter a app's package name and start lock task mode
 
-## Ca certificate
+## CA certificate
 
 **[Device owner] [Profile owner]**
 
@@ -304,7 +304,7 @@ FRP can protect the device after untrusted factory reset (in recovery or fastboo
 
 ::: danger
 
-Use with extreme caution
+This is a dangerous feature
 
 :::
 
@@ -323,8 +323,6 @@ Actions:
 **[API28]** Reason: should be only used with WipeData
 
 If you use this function in a managed user, all data of that user will be wiped, but that user won't be removed
-
-If you use this function in a work profile, the work profile will be removed
 
 From API34, you can't use WipeData in main user, please use WipeDevice instead
 

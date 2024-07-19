@@ -26,3 +26,10 @@ They are actually users, remove it
 
 You should open `USB debugging (Security setting)` in developer options.
 Execute activating command with superuser can bypass this limitation
+
+## Get support
+
+**Telegram:**
+- Channel: [OwnDroid](https://t.me/owndroid_channel)
+- Discussion group: [OwnDroid discussion](https://t.me/owndroid_discussion)
+- CI Builds: [OwnDroid CI](https://t.me/owndroid_ci)
