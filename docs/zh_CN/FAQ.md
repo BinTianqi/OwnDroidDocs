@@ -31,6 +31,14 @@
 
 使用root权限执行激活命令可以忽略这个限制
 
+### HookDPM
+
+如果你有root权限，可以试着绕过这些限制。
+
+[HookDPM](https://github.com/BinTianqi/HookDPM)是一个LSPosed模块，它修改`DevicePolicyManagerService`以绕过这些限制。
+
+注意，这个模块可能在非原生系统上不工作，如果你遇到了这个问题，欢迎提交反馈。
+
 ## 获取支持
 
 **Telegram:**

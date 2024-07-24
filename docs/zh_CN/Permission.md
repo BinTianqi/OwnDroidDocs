@@ -6,6 +6,18 @@
 
 :::
 
+## Dhizuku API
+
+> Dhizuku可以分享Device owner权限给其余应用
+
+https://github.com/iamr0s/Dhizuku
+
+::: info
+
+Dhizuku对部分API作出了限制，如果使用Dhizuku模式，OwnDroid会在使用某些功能时崩溃。如果遇到了这样的情况，请不要发送反馈，除非你确定这是由OwnDroid本身引起的。
+
+:::
+
 ## Device admin
 
 即“设备管理器”
@@ -59,6 +71,7 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 - ADB
 - Shizuku
+- Dhizuku
 
 ADB激活命令：
 
@@ -66,13 +79,13 @@ ADB激活命令：
 dpm set-device-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 ```
 
-激活前必须删除所有用户（user），否则会报错。你可以使用下面这条ADB命令查看已有的用户
+激活时设备上不能有多余1个用户（user），否则会报错。你可以使用下面这条ADB命令查看已有的用户
 
 ```shell
 pm list users
 ```
 
-激活前也要删除所有账号（account），否则会报错。你可以使用下面这条ADB命令查看已有的账号
+激活时设备上不能有任何账号（account），否则会报错。你可以使用下面这条ADB命令查看已有的账号
 
 ```shell
 dumpsys account
@@ -92,9 +105,9 @@ dumpsys account
 
 ### 停用
 
-- 在“权限”页面停用
-
 停用Device owner时会同时停用Device admin
+
+如果你在使用Dhizuku模式，此操作会直接停用Dhizuku
 
 ## Shizuku
 

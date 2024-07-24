@@ -1,5 +1,17 @@
 # Permission
 
+## Dhizuku API
+
+> Dhizuku is a tool that can share Device owner permissions to other application.
+
+https://github.com/iamr0s/Dhizuku
+
+::: info
+
+Dhizuku restricts some DevicePolicyManager APIs, if you're using Dhizuku mode, OwnDroid may crash when you try to use certain functions. Please don't send feedback when you encounter this issue, unless you are sure it's caused by OwnDroid itself.
+
+:::
+
 ## Device admin
 
 You can activate Device admin easily, but Device admin can do almost nothing
@@ -49,6 +61,7 @@ A device owner app is a special device admin that cannot be deactivated in Setti
 
 - Command
 - Shizuku
+- Dhizuku
 
 Command:
 
@@ -56,7 +69,7 @@ Command:
 dpm set-device-owner com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 ```
 
-You should remove all other users on your device before activate Device owner
+Activation will fail if there are more than 1 user on your device.
 
 This command will list all users on your device
 
@@ -64,7 +77,7 @@ This command will list all users on your device
 pm list users
 ```
 
-You should remove all accounts on your device before activate Device owner
+Activation will fail if there are any accounts on your device.
 
 This command will list all accounts on your device
 
@@ -86,9 +99,9 @@ Please use OwnDroid APK signed with testkey
 
 ### Deactivate
 
-- Deactivate in OwnDroid
-
 Device admin permission of OwnDroid will be also removed when you deactivate Device owner
+
+If you are using Dhizuku mode, this operation will deactivate both Dhizuku and OwnDroid
 
 ## Shizuku
 
