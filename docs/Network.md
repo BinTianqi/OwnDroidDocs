@@ -1,6 +1,6 @@
 # Network
 
-All functions there require API24 or above, Device owner or Profile owner. If not, OnwDroid will hide the entry
+All functions there require Device owner or Profile owner. If not, OnwDroid will hide the entry
 
 ## Wi-Fi Mac address
 
@@ -76,6 +76,17 @@ It will perform a connectivity check to the resolver, to ensure it is valid.
 In case a VPN is used in conjunction with Private DNS resolver, the Private DNS resolver must be reachable both from within and outside the VPN. Otherwise, the device may lose the ability to resolve hostnames as system traffic to the resolver may not go through the VPN.
 
 TODO: set host in coroutine
+
+## Recommended global proxy
+
+**[Device owner]**
+
+Types:
+- No proxy
+- PAC proxy
+- Direct proxy
+
+This proxy is only a recommendation and it is possible that some apps will ignore it.
 
 ## Network log
 
