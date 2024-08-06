@@ -200,5 +200,11 @@ pm list permissions
 
 ## 安装应用
 
+::: info
+
+此功能在Dhizuku模式下不可用
+
+::::
+
 - 静默安装 **[Device owner]**
 - 请求安装

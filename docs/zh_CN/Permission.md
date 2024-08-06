@@ -18,6 +18,15 @@ Dhizuku对部分API作出了限制，如果使用Dhizuku模式，OwnDroid会在�
 
 :::
 
+::: info 把Device owner权限转移给Dhizuku
+
+如果OwnDroid是Device owner，你可以使用[转移所有权](#转移所有权)，把OwnDroid的Device owner权限转移给Dhizuku
+
+- 包名： `com.rosan.dhizuku`
+- 类名： `com.rosan.dhizuku.server.DhizukuDAReceiver`
+
+:::
+
 ## Device admin
 
 即“设备管理器”
@@ -211,7 +220,6 @@ DPMRH: Device policy management role holder
 
 **[API28]**
 
-转移Device owner或Profile owner权限或到另外一个管理员
+转移Device owner或Profile owner权限到另外一个app
 
 目标应用必须支持转移所有权
-

@@ -185,7 +185,7 @@ Clear an app's storage and cache
 
 ::: info
 
-An application can store data outside of its application data, e.g. external storage or user dictionary. This data will not be wiped by calling this API.
+An application can store data outside its application data, e.g. external storage or user dictionary. This data will not be wiped by calling this API.
 
 :::
 
@@ -203,6 +203,12 @@ Set an app as the default dialer
 - Request uninstall
 
 ## Install app
+
+::: info 
+
+This feature is unavailable when using Dhizuku mode
+
+:::
 
 - Silent install **[Device owner]**
 - Request install

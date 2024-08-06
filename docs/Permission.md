@@ -12,6 +12,15 @@ Dhizuku restricts some DevicePolicyManager APIs, if you're using Dhizuku mode, O
 
 :::
 
+::: info Transfer ownership to Dhizuku
+
+If OwnDroid is Device owner, you can [transfer the ownership](#Transfer-Ownership) to Dhizuku
+
+- Package name: `com.rosan.dhizuku`
+- Class name: `com.rosan.dhizuku.server.DhizukuDAReceiver`
+
+:::
+
 ## Device admin
 
 You can activate Device admin easily, but Device admin can do almost nothing
