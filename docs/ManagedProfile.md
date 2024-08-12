@@ -10,7 +10,7 @@ Work profile is a kind of user, you will see your work profile when you `pm list
 
 :::
 
-<h2 id="CreateWorkProfile">Create work profile</h2>
+## Create work profile
 
 Require no Device owner or Profile owner is set
 
@@ -28,17 +28,17 @@ You can create a work profile on WearOS. But you need a 3rd party launcher to la
 
 :::
 
-<h2 id="OrgOwnedProfile">Organization-owned profile</h2>
+## Organization-owned profile
 
-**[Work profile]**
+`Work profile`
 
-**[API30]**
+`API30`
 
 Use all work profile features with org-owned profile permission
 
 It is recommended to activate org-owned profile with [Shizuku](Permission#Shizuku)
 
-First, get the UserID of your work profile in [UserManager -> User info](UserManager#UserInfo)
+First, get the UserID of your work profile in [UserManager -> User info](UserManager#User-Info)
 
 Then execute this command
 
@@ -49,7 +49,7 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 ## Suspend personal apps
 
-**[Work profile(Org)]**
+`Work profile(org)`
 
 All personal apps except system apps and OwnDroid will be suspended
 
@@ -57,7 +57,7 @@ When personal apps are suspended the device can only be used for calls.
 
 ## Profile maximum time off
 
-**[Work profile(Org)]**
+`Work profile(org)`
 
 Set maximum time the profile is allowed to be turned off. If the profile is turned off for longer, personal apps are suspended on the device.
 
@@ -65,13 +65,13 @@ The minimum non-zero value corresponds to 72 hours. If an admin sets a smaller n
 
 ## Cross profile intent filter
 
-**[Work profile]**
+`Work profile`
 
 Add cross profile intent filters so that some intents sent in the managed profile can also be resolved in the parent, or vice versa. Only activity intents are supported.
 
-<h2 id="RemoveWorkProfile">Remove work profile</h2>
+## Remove work profile
 
-Go to [SystemManager -> Wipe Data](SystemManager#WipeData) in OwnDroid in work profile
+Go to [SystemManager -> Wipe Data](SystemManager#Wipe-Data) in OwnDroid in work profile
 
 If org-owned profile is not activated, you can remove work profile in Android Settings -> Security -> More -> Device admin apps
 

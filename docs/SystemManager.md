@@ -4,21 +4,21 @@
 
 ### Disable camera
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 After setting this, no applications running as this user will be able to access any cameras on the device.
 
 ### Disable screen capture
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 Disabling screen capture prevents the content from being shown on display devices that do not have a secure video output.
 
 ### Hide status bar
 
-**[Device owner] [Profile owner(Affiliated)]**
+`Device owner` / `Profile owner(Affiliated)`
 
-**[API34]**
+`API34`
 
 Disabling the status bar blocks notifications and quick settings.
 
@@ -28,11 +28,11 @@ This method has no effect for LockTask mode.
 
 :::
 
-<h2 id="AutoTime">Auto time</h2>
+### Auto time
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
-**[API30]**
+`API30`
 
 ::: tip
 
@@ -40,11 +40,11 @@ Enable [Configure date or time](UserRestriction#Other) in User restriction to pr
 
 :::
 
-<h3 id="AutoTimezone">Auto timezone</h3>
+### Auto timezone
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
-**[API30]**
+`API30`
 
 ::: tip
 
@@ -54,7 +54,7 @@ Enable [Configure date or time](UserRestriction#Other) in User restriction to pr
 
 ### Require auto time
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 **Deprecated from API 30.** From API31, OwnDroid won't show this feature
 
@@ -62,15 +62,15 @@ If auto time is required, no user will be able set the date and time and network
 
 ### Master volume mute
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 Set the global volume mute on or off. This has no effect when set on a managed profile.
 
 ### Backup service
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API26]**
+`API26`
 
 Each user has its own backup service which manages the backup and restore mechanisms in that user. Disabling the backup service will prevent data from being backed up or restored.
 
@@ -78,17 +78,17 @@ For a managed user its backup functionality is only enabled if both the device o
 
 ### Disable bluetooth contacts sharing
 
-**[Work profile]**
+`Work profile`
 
-**[API23]**
+`API23`
 
 TODO: update permission
 
 ### Common criteria mode
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API30]**
+`API30`
 
 When the device is in Common Criteria mode, certain device functionalities are tuned to meet the higher security level required by Common Criteria certification. For example:
 
@@ -103,9 +103,9 @@ If Common Critera mode is turned off after being enabled previously, all existin
 
 ### USB signal
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API31]**
+`API31`
 
 Enable or disable USB data signaling for the device. When disabled, USB data connections (except from charging functions) are prohibited.
 
@@ -113,17 +113,17 @@ This function is not supported on all devices
 
 ## Keyguard
 
-**[Device owner] [Profile owner(Affiliated)]**
+`Device owner` / `Profile owner(Affiliated)`
 
-**[API28]**
+`API28`
 
 Setting the keyguard to disabled has the same effect as choosing "None" as the screen lock type. However, this call has no effect if a password, pin or pattern is currently set. If a password, pin or pattern is set after the keyguard was disabled, the keyguard stops being disabled.
 
-<h2 id="LockNow">Lock screen now</h2>
+## Lock screen now
 
 TODO: separate this feature
 
-**[Device admin]**
+`Device admin`
 
 This method secures the device in response to an urgent situation, such as a lost or stolen device. After this method is called, the device must be unlocked using strong authentication (PIN, pattern, or password).
 
@@ -137,37 +137,37 @@ In order to secure user data, the user will be stopped and restarted so apps sho
 
 ## Request bug report
 
-**[Device owner]**
+`Device owner`
 
-**[API24]**
+`API24`
 
 ## Reboot
 
-**[Device owner]**
+`Device owner`
 
-**[API24]**
+`API24`
 
 You can't use this function if there is an ongoing call on the device
 
 ## Edit time
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
 Input time in milliseconds since the Epoch(1970/1/1 00:00:00 UTC)
 
-[Auto time](#AutoTime) should be disabled before use this function
+[Auto time](#Auto-Time) should be disabled before use this function
 
 ## Edit timezone
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 You can view all available timezone ID in OwnDroid
 
-[Auto timezone](#AutoTimezone) should be disabled before use this function
+[Auto timezone](#Auto-Timezone) should be disabled before use this function
 
 ## Permission policy
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 Set the default response for future runtime permission requests by applications.
 
@@ -177,9 +177,9 @@ Set the default response for future runtime permission requests by applications.
 
 ## MTE policy
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API34]**
+`API34`
 
 Require ARMv9 SoC
 
@@ -195,9 +195,9 @@ The device needs to be rebooted to apply changes to the MTE policy.
 
 ## Nearby streaming policy
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API31]**
+`API31`
 
 Modes:
 
@@ -212,9 +212,9 @@ Notification streaming is sending notification data from pre-installed apps to n
 
 ## Lock task mode
 
-**[Device owner]**
+`Device owner`
 
-**[API28]**
+`API28`
 
 ### Lock task features
 
@@ -238,7 +238,7 @@ Enter a app's package name and start lock task mode
 
 ## CA certificate
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 Select a CA cert, then
   - View if the certificate is installed
@@ -257,9 +257,9 @@ Inserted user CAs aren't automatically trusted by apps in API24 and higher.
 
 This function is not available now
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
-**[API24]**
+`API24`
 
 If a Device owner use this function, all users should be affiliated
 
@@ -271,7 +271,7 @@ TODO
 
 ## System update policy
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
 View if there is a pending system update
 
@@ -284,7 +284,7 @@ System update policy:
 
 ## Install system update
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
 A `DeadSystemException` may appear
 
@@ -294,13 +294,13 @@ TODO: Context.getMainExecutor()
 
 FRP: Factory reset protection
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
 To enable this feature, the device must support persistent data block service
 
 FRP can protect the device after untrusted factory reset (in recovery or fastboot)
 
-<h2 id="WipeData">Wipe data</h2>
+## Wipe data
 
 ::: danger
 
@@ -311,16 +311,16 @@ This is a dangerous feature
 Options:
 
 - Wipe external storage
-- Wipe protected data **[Device owner]**
+- Wipe protected data `Device owner`
 - Wipe eUICC (eSIM)
 - Wipe silently
 
 Actions:
 
-- WipeData. **[Device admin]**
-- **[API34]** WipeDevice. **[Device owner] [Work profil(Org)]**
+- WipeData. `Device admin`
+- `API34` WipeDevice. `Device owner` / `Work profil(org)`
 
-**[API28]** Reason: should be only used with WipeData
+`API28` Reason: should be only used with WipeData
 
 If you use this function in a managed user, all data of that user will be wiped, but that user won't be removed
 

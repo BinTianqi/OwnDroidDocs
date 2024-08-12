@@ -12,21 +12,21 @@ You can only use numeric PIN on WearOS platform. Don't set an alphabetic passwor
 
 :::
 
-<h2 id="PasswordInfo">Password info</h2>
+## Password info
 
-- **[API29]** Current password complexity. Please view [Required password complexity](#RequiredPasswordComplexity)
+- `API29` Current password complexity. Please view [Required password complexity](#Required-Password-Complexity)
 
 - Is password complexity sufficient. If the current password complexity match the required password complexity
 
-- Password failed attempts. **[Device admin]**
+- Password failed attempts. `Device admin`
 
-- **[API28]** Unified password. true if the work profile and main user use a same password
+- `API28` Unified password. true if the work profile and main user use a same password
 
 ## Reset password token
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API26]**
+`API26`
 
 Actions:
 
@@ -54,17 +54,17 @@ If you set a numeric password that length is 6 or lower, it will set as PIN
 
 Options: 
 
-- Do not ask credentials on boot **[Device owner]**
+- Do not ask credentials on boot `Device owner`
 - Require entry. Don't allow other admins to change the password again until the user has entered it.
 
 Actions: 
 
-- **[API26]** Reset password with token **[Device owner] [Profile owner]**
+- `API26` Reset password with token `Device owner` / `Profile owner`
 - Reset password (Deprecated) (Before API24, Device admin can use it anytime. From API24, Device admin can set a password if no password it set, Device owner and Profile owner can reset password if the device is unlocked. Deprecated from API26)
 
 ## Screen timeout
 
-**[Device admin]**
+`Device admin`
 
 Set the maximum time for user activity until the device will lock. This limits the length that the user can set.
 
@@ -74,7 +74,7 @@ TODO: update permission
 
 ## Password expiration timeout
 
-**[Device admin]**
+`Device admin`
 
 Restart the countdown for password expiration
 
@@ -84,7 +84,7 @@ TODO: update permission
 
 ## Max failed passwords for wipe
 
-**[Device admin]**
+`Device admin`
 
 Setting this to a value greater than zero enables a policy that will perform a device or profile wipe after too many incorrect device-unlock passwords have been entered.
 
@@ -94,7 +94,7 @@ TODO: update permission
 
 ## Password history length
 
-**[Device admin]**
+`Device admin`
 
 Set the length of the password history.
 After setting this, the user will not be able to enter a new password that is the same as any password in the history. Note that the current password will remain until the user has set a new one, so the change does not take place immediately.
@@ -105,19 +105,19 @@ TODO: update permission
 
 ## Required strong auth timeout
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API26]**
+`API26`
 
 Determine for how long the user will be able to use secondary, non strong auth for authentication, since last strong method authentication (password, pin or pattern) was used. After the returned timeout the user is required to use strong authentication method.
 
 A value of 0 means the admin is not participating in controlling the timeout. The minimum and maximum timeouts are platform-defined and are typically 1 hour and 72 hours, respectively.
 
-<h2 id="RequiredPasswordComplexity">Required password complexity</h2>
+## Required password complexity
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API31]**
+`API31`
 
 Sets a minimum password complexity requirement for the user's screen lock. The user is unable to set a password with a lower complexity level.
 
@@ -132,7 +132,7 @@ You can jump to Settings to set a new password by click _Request to set a new pa
 
 ## Keyguard features
 
-**[Device admin]**
+`Device admin`
 
 TODO: update permission
 
@@ -153,16 +153,16 @@ Custom features:
 - Disable trust agents
 - Disable fingerprint unlock
 - Disable remote input (Deprecated)
-- **[API28]** Disable face unlock
-- **[API28]** Disable iris unlock
-- **[API28]** Disable biometric unlock
-- **[API34]** Disable shortcuts
+- `API28` Disable face unlock
+- `API28` Disable iris unlock
+- `API28` Disable biometric unlock
+- `API34` Disable shortcuts
 
 ## Require password quality
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**Deprecated from API31.** Please use [Required password complexity](#RequiredPasswordComplexity)
+**Deprecated from API31.** Please use [Required password complexity](#Required-Password-Complexity)
 
 Quality levels:
 

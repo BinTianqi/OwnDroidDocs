@@ -4,21 +4,21 @@
 
 ### 禁用相机
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 打开后，会为当前用户禁用所有摄像头
 
 ### 禁止截屏
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 相当于全局的FLAG_SECURE
 
 ### 隐藏状态栏
 
-**[Device owner] [Profile owner（附属）]**
+`Device owner` / `Profile owner（附属）`
 
-**[API34]**
+`API34`
 
 禁用通知和快速设置
 
@@ -30,9 +30,9 @@
 
 ### 自动设置时间
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API30]**
+`API30`
 
 ::: tip
 
@@ -42,9 +42,9 @@
 
 ### 自动设置时区
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API30]**
+`API30`
 
 ::: tip
 
@@ -54,7 +54,7 @@
 
 ### 要求自动时间
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 自从API30开始弃用，在API30或以上的设备上，此功能不会显示
 
@@ -62,15 +62,15 @@
 
 ### 全局静音
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 在工作资料中无效
 
 ### 备份服务
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API26]**
+`API26`
 
 禁用后用户不能使用备份服务备份或恢复数据
 
@@ -78,15 +78,15 @@
 
 ### 禁止蓝牙分享联系人
 
-**[工作资料]**
+`工作资料`
 
-**[API23]**
+`API23`
 
 ### 通用标准模式
 
-**[Device owner]**
+`Device owner`
 
-**[API30]**
+`API30`
 
 当设备处于通用标准模式时，某些设备功能会进行调整以满足通用标准模式所要求的安全级别。例如：
 
@@ -101,9 +101,9 @@
 
 ### USB信号
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API31]**
+`API31`
 
 启用或禁用USB数据信号
 
@@ -111,15 +111,15 @@
 
 ## 锁屏
 
-**[Device owner] [Profile owner（附属）]**
+`Device owner` / `Profile owner（附属）`
 
-**[API28]**
+`API28`
 
 禁用锁屏相当于把锁屏方式设置为“无”。在已设置密码或图案时使用这个功能无效。如果在锁屏禁用时设置密码或图案，锁屏将启用
 
 ## 立即锁屏
 
-**[Device admin]**
+`Device admin`
 
 此功能可确保设备安全，以应对紧急情况，例如设备丢失或被盗。调用此方法后，必须使用强身份验证（PIN、图案或密码）解锁设备。
 
@@ -133,21 +133,21 @@
 
 ## 请求错误报告
 
-**[Device owner]**
+`Device owner`
 
-**[API24]**
+`API24`
 
 ## 重启
 
-**[Device owner]**
+`Device owner`
 
-**[API24]**
+`API24`
 
 打电话时不能使用此功能
 
 ## 修改时间
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
 输入从Epoch(1970/1/1 00:00:00 UTC)到你想设置的时间(毫秒)
 
@@ -155,7 +155,7 @@
 
 ## 修改时区
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 可以查看所有时区ID
 
@@ -163,7 +163,7 @@
 
 ## 权限策略
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 设置应用申请运行时权限时的默认选择
 
@@ -173,9 +173,9 @@
 
 ## MTE策略
 
-**[Device owner]**
+`Device owner`
 
-**[API34]**
+`API34`
 
 需要ARMv9的SoC
 
@@ -191,9 +191,9 @@
 
 ## 附近流式传输策略
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API31]**
+`API31`
 
 选项：
 
@@ -208,9 +208,9 @@
 
 ## 锁定任务模式
 
-**[Device owner]**
+`Device owner`
 
-**[API28]**
+`API28`
 
 ### 锁定任务功能
 
@@ -222,7 +222,7 @@
   - 允许打开后台应用概览
   - 允许全局行为（比如长按电源键的对话框）
   - 允许锁屏（如果不允许，即使有密码也不会锁屏）
-  - **[API30]** 阻止启动未允许的应用（阻止白名单应用启动非白名单应用）
+  - `API30` 阻止启动未允许的应用（阻止白名单应用启动非白名单应用）
 
 ### 锁定任务应用
 
@@ -234,7 +234,7 @@
 
 ## CA证书
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 - 选择一个证书（.0文件）
 
@@ -252,9 +252,9 @@
 
 ## 安全日志
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API24]**
+`API24`
 
 如果被Device owner使用，设备上不能有非附属用户，否则不会有输出
 
@@ -266,7 +266,7 @@
 
 ## 系统更新策略
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
 查看待安装的更新是否安全补丁
 
@@ -279,7 +279,7 @@
 
 ## 安装系统更新
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
 可能会出现`DeadSystemException`
 
@@ -287,7 +287,7 @@
 
 ## FRP策略
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
 FRP: Factory reset protection
 
@@ -308,16 +308,16 @@ FRP用于防止不受信任的重置。简单来说，当FRP启用时，通过Re
 选项：
 
 - 清除外部存储
-- 清除受保护的数据 **[Device owner]**
+- 清除受保护的数据 `Device owner`
 - 清除eUICC(eSIM)
 - 静默清除（不会向用户显示原因）
 
 方法：
 
-- WipeData **[Device admin]**
-- **[API34]** WipeDevice **[Device owner] [工作资料（组织）]**
+- WipeData `Device admin`
+- `API34` WipeDevice `Device owner` / `工作资料（组织）`
 
-**[API28]** 恢复出厂原因：配合WipeData使用
+`API28` 恢复出厂原因：配合WipeData使用
 
 如果在受管理用户中使用，会清除那个用户的数据并跳转到主用户，但不会删除受管理用户
 

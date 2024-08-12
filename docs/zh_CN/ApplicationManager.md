@@ -16,9 +16,9 @@ pm list packages
 
 ## 挂起
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API24]**
+`API24`
 
 挂起的应用无法被打开，通知会被隐藏，不会在最近任务中显示，不能弹窗，不能发送Toast
 
@@ -26,7 +26,7 @@ pm list packages
 
 ## 隐藏
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 应用被隐藏后无法使用，但是数据会保留
 
@@ -41,9 +41,9 @@ pm list packages
 
 ## VPN保持打开
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API24]**
+`API24`
 
 通过一个指定的app，为当前用户设置一个保持打开的VPN连接。自动授权连接并在重启后保留
 
@@ -53,7 +53,7 @@ pm list packages
 
 ## 防卸载
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 设置用户是否能卸载某个应用
 
@@ -71,7 +71,7 @@ pm list packages
 
 ## 禁止用户控制
 
-**[Device owner(API30)] [Profile owner(API33)]**
+`Device owner(API30)` / `Profile owner(API33)`
 
 用户无法清除这些应用的存储空间，也无法强制停止应用
 
@@ -83,7 +83,7 @@ pm list packages
 
 ## 权限管理
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 给一个应用的某个运行时权限设置授权状态
 
@@ -117,9 +117,9 @@ pm list permissions
 
 ## 跨资料应用
 
-**[工作资料]**
+`工作资料`
 
-**[API30]**
+`API30`
 
 设置允许申请跨资料通信权限的应用
 
@@ -133,15 +133,15 @@ pm list permissions
 
 ## 跨资料微件
 
-**[工作资料]**
+`工作资料`
 
 你可以在主用户中使用工作资料应用提供的桌面小组件
 
 ## 凭据管理策略
 
-**[Device owner] [工作资料]**
+`Device owner` / `工作资料`
 
-**[API34]**
+`API34`
 
 模式：
 
@@ -153,7 +153,7 @@ pm list permissions
 
 ## 许可的无障碍服务&输入法
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 模式：
 
@@ -165,17 +165,17 @@ pm list permissions
 
 ## 卸载后保留的应用
 
-**[Device owner]**
+`Device owner`
 
-**[API28]**
+`API28`
 
 这个列表中的应用的APK将会一直保留，即使没有任何用户安装这个应用
 
 ## 清除应用存储
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API28]**
+`API28`
 
 清除应用的存储空间
 
@@ -187,15 +187,15 @@ pm list permissions
 
 ## 默认拨号应用
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API34]**
+`API34`
 
 把一个应用设为默认拨号应用
 
 ## 卸载应用
 
-- 静默卸载 **[Device owner]**
+- 静默卸载 `Device owner`
 - 请求卸载
 
 ## 安装应用
@@ -206,5 +206,5 @@ pm list permissions
 
 ::::
 
-- 静默安装 **[Device owner]**
+- 静默安装 `Device owner`
 - 请求安装

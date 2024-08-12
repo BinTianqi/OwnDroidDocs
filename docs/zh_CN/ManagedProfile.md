@@ -16,7 +16,7 @@
 
 选项：
 
-- **[API24]** 跳过加密 (TODO)
+- `API24` 跳过加密 (TODO)
 
 创建后工作资料中的OwnDroid会成为Profile owner
 
@@ -28,9 +28,9 @@
 
 ## 由组织拥有的工作资料
 
-**[工作资料]**
+`工作资料`
 
-**[API30]**
+`API30`
 
 成为由组织拥有的工作资料后可以使用更多功能
 
@@ -45,13 +45,12 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 ## 挂起个人应用
 
-**[工作资料（组织）]**
 
 只会挂起个人的用户应用，系统应用和OwnDroid仍然可以打开
 
 ## 资料最长关闭时间
 
-**[工作资料（组织）]**
+`工作资料（组织）`
 
 用户可以关闭工作资料，如果关闭工作资料的时间超过了在这里设置的时间，会挂起个人应用
 
@@ -59,6 +58,6 @@ dpm mark-profile-owner-on-organization-owned-device --user USER_ID com.bintianqi
 
 ## 跨资料Intent过滤器
 
-**[工作资料]**
+`工作资料`
 
 添加跨资料Intent过滤器，使工作资料中可以发送的指定Intent到主用户，反之亦然。仅支持Activity意图。

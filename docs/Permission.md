@@ -2,9 +2,9 @@
 
 ## Dhizuku API
 
-> Dhizuku is a tool that can share Device owner permissions to other application.
-
 https://github.com/iamr0s/Dhizuku
+
+Dhizuku is a tool that can share Device owner permissions to other application.
 
 ::: info
 
@@ -49,8 +49,8 @@ Profile owner can exist in main user, work profile and managed user
 
 ### Activate
 
-- [Create work profile](ManagedProfile#CreateWorkProfile)
-- [Create managed user](UserManager#CreateUser)
+- [Create work profile](ManagedProfile#Create-Work-Profile)
+- [Create managed user](UserManager#Create-User)
 
 Activate a Profile owner in main user is not recommended.
 
@@ -58,7 +58,7 @@ Activate a Profile owner in main user is not recommended.
 
 Main user: Deactivate in OwnDroid
 
-Work profile: [Remove work profile](ManagedProfile#RemoveWorkProfile)
+Work profile: [Remove work profile](ManagedProfile#Remove-Work-Profile)
 
 Managed user: Remove that user
 
@@ -114,41 +114,41 @@ If you are using Dhizuku mode, this operation will deactivate both Dhizuku and O
 
 ## Shizuku
 
-[Rikka/Shizuku](https://github.com/RikkaApps/Shizuku)
+https://github.com/RikkaApps/Shizuku
 
 Functions:
 
 - Activate [Device admin](#device-admin)
 - Activate [Profile owner](#profile-owner)
 - Activate [Device owner](#device-owner)
-- Activate [Organization owned profile](ManagedProfile#OrgOwnedProfile)
+- Activate [Organization owned profile](ManagedProfile#Organization-Owned-Profile)
 - List Device owner and Profile owner
 
-TODO: list users, list accounts, show error output
+TODO: list users, list accounts
 
 ## Device info
 
 ### DPMRH
 
-**[API33]**
+`API33`
 
 Device policy management role holder
 
 ### Encryption status
 
-**[Device admin]**
+`Device admin`
 
 There are 5 encryption statuses. Unsupported, inactive, active, active(default key), active(per user) 
 
 ### Support device ID attestation
 
-**[API28]**
+`API28`
 
 true if the device supports attestation of device identifiers in addition to key attestation.
 
 ### Support unique device attestation
 
-**[API30]**
+`API30`
 
 true if the StrongBox Keymaster implementation on the device was provisioned with an individual attestation certificate and can sign attestation records using it (only Keymaster with StrongBox security level can use an individual attestation certificate).
 
@@ -158,17 +158,17 @@ A list of active Device admin
 
 ## Organization name
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API26]**
+`API26`
 
 Set the name of your company
 
-<h2 id="OrgID">Organization ID</h2>
+## Organization ID
 
-**[Device owner] [Work profile]**
+`Device owner` / `Work profile`
 
-**[API31]**
+`API31`
 
 Sets the Enterprise ID. This is a requirement for generating an enrollment-specific ID for the device.
 
@@ -176,33 +176,33 @@ TODO: check permission of this and specific id in app
 
 ## Enrollment specific ID
 
-**[Device owner] [Work profile]**
+`Device owner` / `Work profile`
 
-**[API31]**
+`API31`
 
-Requires [Organization ID](#OrgID) is set
+Requires [Organization ID](#Organization-ID) is set
 
 The identifier would be consistent even if the work profile is removed and create again (to the same Organization ID), or the device is factory reset and re-enrolled.
 
 ## Organization name
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API26]**
+`API26`
 
 Set the name of your company
 
 ## Disable account management
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 When account management is disabled for an account type, adding or removing an account of that type will not be possible.
 
 ## Lock screen info
 
-**[Device owner] [Profile owner(Org)]**
+`Device owner`
 
-**[API24]**
+`API24`
 
 Show a brief message on your lock screen
 
@@ -210,9 +210,9 @@ Overrides any owner information manually set by the user and prevents the user f
 
 ## Supported message
 
-**[Device admin]**
+`Device admin`
 
-**[API24]**
+`API24`
 
 ### Short support message
 
@@ -226,9 +226,9 @@ If the message is longer than 20000 characters it may be truncated.
 
 ## Transfer Ownership
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API28]**
+`API28`
 
 Changes the current administrator to another one. All policies from the current administrator are migrated to the new administrator.
 

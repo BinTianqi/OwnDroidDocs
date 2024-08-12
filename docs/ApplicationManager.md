@@ -18,9 +18,9 @@ Jump to details of this app
 
 ## Suspend
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API24]**
+`API24`
 
 A suspended package will not be able to start activities. Its notifications will be hidden, it will not show up in recents, will not be able to show toasts or dialogs or ring the device.
 
@@ -28,7 +28,7 @@ Some apps cannot be suspended, such as device admins, the active launcher and th
 
 ## Hide
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 When a package is hidden it is unavailable for use, but the data and actual package file remain.
 
@@ -45,9 +45,9 @@ TODO: how to find hidden apps
 
 ## Always-on VPN
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API24]**
+`API24`
 
 Configure an always-on VPN connection through a specific application for the current user. This connection is automatically granted and persisted after a reboot.
 
@@ -57,7 +57,7 @@ Option:
 
 ## Block uninstall
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 Change whether a user can uninstall a package.
 
@@ -75,7 +75,7 @@ Block uninstall globally: [UserRestriction->Application](UserRestriction#Applica
 
 ## Disable user control
 
-**[Device owner(API30)] [Profile owner(API33)]**
+`Device owner(API30)` / `Profile owner(API33)`
 
 User will not be able to clear app data or force-stop packages.
 
@@ -87,7 +87,7 @@ Disable apps control globally: [User restriction -> Application](UserRestriction
 
 ## Permission manage
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 Sets the grant state of a runtime permission for a specific application. 
 
@@ -121,9 +121,9 @@ TODO: list only runtime permissions
 
 ## Cross profile apps
 
-**[Work profile]**
+`Work profile`
 
-**[API30]**
+`API30`
 
 Set the set of admin-allowlisted package names that are allowed to request user consent for cross-profile communication.
 
@@ -137,13 +137,13 @@ Few apps support this function. As I only know, GBoard supports this function.
 
 ## Cross profile widget provider
 
-**[Work profile]**
+`Work profile`
 
 You can use widgets that provided by work profile apps in main user
 
 ## Credential manage policy
 
-**[Device owner] [Work profile]**
+`Device owner` / `Work profile`
 
 Require API34 or above
 
@@ -157,7 +157,7 @@ This policy controls which apps can use [CredentialManager](https://developer.an
 
 ## Permitted accessibility service & IME
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 Modes: 
 
@@ -169,17 +169,17 @@ System accessibility services and IMEs are always available to the user and this
 
 ## Keep uninstalled app
 
-**[Device owner]**
+`Device owner`
 
-**[API28]**
+`API28`
 
 Set a list of apps to keep around as APKs even if no user has currently installed it. 
 
 ## Clear app storage
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API28]**
+`API28`
 
 Clear an app's storage and cache
 
@@ -191,15 +191,15 @@ An application can store data outside its application data, e.g. external storag
 
 ## Default dialer app
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
-**[API34]**
+`API34`
 
 Set an app as the default dialer
 
 ## Uninstall app
 
-- Silent uninstall **[Device owner]**
+- Silent uninstall `Device owner`
 - Request uninstall
 
 ## Install app
@@ -210,5 +210,5 @@ This feature is unavailable when using Dhizuku mode
 
 :::
 
-- Silent install **[Device owner]**
+- Silent install `Device owner`
 - Request install

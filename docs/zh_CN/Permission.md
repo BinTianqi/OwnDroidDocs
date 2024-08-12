@@ -8,9 +8,9 @@
 
 ## Dhizuku API
 
-> Dhizuku可以分享Device owner权限给其余应用
-
 https://github.com/iamr0s/Dhizuku
+
+Dhizuku可以分享Device owner权限给其余应用
 
 ::: info
 
@@ -68,7 +68,7 @@ dpm set-active-admin com.bintianqi.owndroid/com.bintianqi.owndroid.Receiver
 
 ### 停用
 
-工作资料：[删除工作资料](ManagedProfile#删除工作资料)
+工作资料：删除工作资料
 
 受管理的用户：删除用户
 
@@ -120,7 +120,7 @@ dumpsys account
 
 ## Shizuku
 
-请自己学习如何启动[Shizuku](https://github.com/RikkaApps/Shizuku)
+https://github.com/RikkaApps/Shizuku
 
 功能：
 
@@ -134,25 +134,25 @@ dumpsys account
 
 ### 设备策略管理器角色
 
-**[API33]**
+`API33`
 
 DPMRH: Device policy management role holder
 
 ### 加密状态
 
-**[Device admin]**
+`Device admin`
 
 有以下5种状态：不支持、未使用、正在使用、正在使用（默认密钥）、正在使用（每个用户分别加密）
 
 ### 支持设备ID认证
 
-**[API28]**
+`API28`
 
 如果支持密钥证明和设备ID证明，返回true
 
 ### 支持唯一设备认证
 
-**[API30]**
+`API30`
 
 如果设备上的StrongBox Keymaster可以配置单独的证明证书并且可以使用该证书签署证明记录，则返回true（只有StrongBox安全级别的Keymaster才能使用单独的证明证书进行证明）
 
@@ -162,39 +162,39 @@ DPMRH: Device policy management role holder
 
 ## 组织名称
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API26]**
+`API26`
 
 设置组织名称后会在一些地方显示“此设备归xxx所有”
 
 ## 组织ID
 
-**[Device owner] [工作资料]**
+`Device owner` / `工作资料`
 
-**[API31]**
+`API31`
 
 设置组织ID后才能获取设备注册专用ID
 
 ## 设备注册专用ID
 
-**[Device owner] [工作资料]**
+`Device owner` / `工作资料`
 
-**[API31]**
+`API31`
 
 需要先设置[组织ID](#组织ID)，不同组织ID的设备注册专用ID不同，恢复出厂设置或删除工作资料后不变
 
 ## 禁用账号控制
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 不能添加或移除被禁用控制的账号
 
 ## 锁屏信息
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API24]**
+`API24`
 
 在锁屏界面上显示的一段简短的消息
 
@@ -202,9 +202,9 @@ DPMRH: Device policy management role holder
 
 ## 提供支持的消息
 
-**[Device admin]**
+`Device admin`
 
-**[API24]**
+`API24`
 
 ### 提供支持的短消息
 
@@ -216,9 +216,9 @@ DPMRH: Device policy management role holder
 
 ## 转移所有权
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API28]**
+`API28`
 
 转移Device owner或Profile owner权限到另外一个app
 

@@ -16,15 +16,15 @@ pm list users
 
 - 支持多用户：系统是否支持多用户。WearOS即使写着支持多用户，但不一定支持
 
-- 系统用户：UserID为0的用户 **[API23]**
+- 系统用户：UserID为0的用户 `API23`
 
-- 管理员用户：可以创建、删除用户。一个设备可以有多个管理员用户 **[API34]**
+- 管理员用户：可以创建、删除用户。一个设备可以有多个管理员用户 `API34`
 
-- 无头系统用户：系统用户运行着系统服务，但是没有分配给任何人使用，不能切换到系统用户（一般在Android Auto上使用） **[API31]**
+- 无头系统用户：系统用户运行着系统服务，但是没有分配给任何人使用，不能切换到系统用户（一般在Android Auto上使用） `API31`
 
-- 临时用户：临时用户登出后或重启后会被删除 **[API28]**
+- 临时用户：临时用户登出后或重启后会被删除 `API28`
 
-- 附属用户：详见[附属用户ID](#AffiliatedID)
+- 附属用户：详见[附属用户ID](#附属用户id)
 
 - UserID：不是UID。系统用户的UserID为0，其他用户（包括工作资料）的UserID从10开始计算
 
@@ -36,29 +36,29 @@ pm list users
 
 无需输入UID/用户序列号的功能：
 
-- **[API28]** 登出当前用户 **[Profile owner（附属）]**
+- `API28` 登出当前用户 `Profile owner（附属）`
 
 需要输入UID/用户序列号的功能：
 
-**[Device owner]**
+`Device owner`
 
-- **[API28]** 在后台启动用户
+- `API28` 在后台启动用户
 - 切换至用户
-- **[API28]** 停止用户
+- `API28` 停止用户
 - 移除用户
 
 ## 创建并管理用户
 
-**[Device owner]**
+`Device owner`
 
-**[API24]**
+`API24`
 
 创建一个受管理用户，新用户的头像右下方会有公文包标志
 
 选项：
 
 - 跳过创建用户向导（切换到新用户之后的向导）
-- 临时用户 **[API29]**
+- 临时用户 `API29`
 - 启用所有系统应用（有些系统应用在新用户中是默认不启用的，比如谷歌手机上的YouTube）
 
 创建后，OwnDroid会成为受管理用户中的Profile owner
@@ -71,9 +71,9 @@ WearOS4(AVD)
 
 :::
 
-<h2 id="AffiliatedID">附属用户ID</h2>
+## 附属用户ID
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 附属用户ID是一个列表，列表中可以有多个不相同的ID，不考虑顺序
 
@@ -85,13 +85,13 @@ Device owner无论在何时都是附属于设备的用户
 
 ## 修改用户名
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 ## 更换用户头像
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API23]**
+`API23`
 
 选择一个图片并设置为当前用户的图标
 

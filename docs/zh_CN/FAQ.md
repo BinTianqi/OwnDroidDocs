@@ -31,6 +31,12 @@
 
 使用root权限执行激活命令可以忽略这个限制
 
+### ColorOS限制
+
+> java.lang.IllegalStateException: Unexpected @ProvisioningPreCondition
+
+使用testkey版本的OwnDroid
+
 ### HookDPM
 
 如果你有root权限，可以试着绕过这些限制。

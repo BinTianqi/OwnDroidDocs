@@ -1,12 +1,11 @@
 # 网络
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
 ## Wi-Fi Mac地址
 
-**[Device owner] [工作资料（组织）]**
 
-**[API24]**
+`API24`
 
 得到的是设备真实的Wi-Fi Mac地址，不是用于连接当前Wi-Fi的随机Mac地址
 
@@ -14,21 +13,21 @@
 
 ### 优先网络服务
 
-**[Device owner(API33)] [工作资料(API31)]**
+`Device owner(API33)` / `工作资料(API31)`
 
 ### 锁定由管理员配置的网络
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API30]**
+`API30`
 
 控制用户是否可以更改管理员配置的网络。启用此锁定后，用户仍然可以配置和连接到其他Wi-Fi，或使用其他Wi-Fi功能（如网络共享）。
 
 ## 最低Wi-Fi安全等级
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API33]**
+`API33`
 
 指定Wi-Fi网络所需的最低安全等级。
 无法连接到低于最低安全等级的网络。如果当前Wi-Fi不满足要求，则会断开连接。
@@ -42,9 +41,9 @@
 
 ## Wi-Fi SSID策略
 
-**[Device owner] [工作资料（组织）]**
+`Device owner` / `工作资料（组织）`
 
-**[API33]**
+`API33`
 
 Wi-Fi网络必须满足SSID限制才能连接
 
@@ -58,9 +57,9 @@ Wi-Fi网络必须满足SSID限制才能连接
 
 ## 私人DNS
 
-**[Device owner]**
+`Device owner`
 
-**[API29]**
+`API29`
 
 ### 将私人DNS模式设为自动
 
@@ -76,7 +75,7 @@ Wi-Fi网络必须满足SSID限制才能连接
 
 ## 建议的全局代理
 
-**[Device owner]**
+`Device owner`
 
 类型：
 - 无代理
@@ -87,9 +86,9 @@ Wi-Fi网络必须满足SSID限制才能连接
 
 ## 网络日志记录
 
-**[Device owner] [工作资料]**
+`Device owner` / `工作资料`
 
-**[API26]**
+`API26`
 
 工作资料中使用此功能只会记录工作资料的网络日志
 
@@ -101,9 +100,9 @@ Wi-Fi网络必须满足SSID限制才能连接
 
 ## Wi-Fi密钥对
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API31]**
+`API31`
 
 可以添加Wi-Fi认证密钥对
 
@@ -111,9 +110,9 @@ Wi-Fi网络必须满足SSID限制才能连接
 
 ## APN设置
 
-**[Device owner]**
+`Device owner`
 
-**[API28]**
+`API28`
 
 我没用过这个功能，因为我不懂APN。如果这个功能能用或者不能用，请打开一个issue
 

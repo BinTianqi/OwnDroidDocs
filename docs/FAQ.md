@@ -35,6 +35,12 @@ If you have root privilege, why not bypass these restrictions?
 
 Note that this module may not work on most of non-AOSP ROMs. Feedbacks are welcome if you encounter this issue.
 
+### ColorOS restriction
+
+> java.lang.IllegalStateException: Unexpected @ProvisioningPreCondition
+
+Use testkey version of OwnDroid
+
 ## Get support
 
 **Telegram:**

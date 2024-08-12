@@ -26,7 +26,7 @@ OwnDroid won't catch error when execute automation tasks, you should make sure t
 - hide - [Hide](ApplicationManager#Hide), require `app` extra
 - unhide - [Hide](ApplicationManager#Hide), require `app` extra
 - reboot - [Reboot](SystemManager#Reboot)
-- lock - [Lock screen now](SystemManager#LockNow)
+- lock - [Lock screen now](SystemManager#Lock-Screen-Now)
 - addUserRestriction - [User restriction](UserRestriction), require `restriction` extra, you can find the list of user restrictions [here](https://developer.android.com/reference/kotlin/android/os/UserManager#constants)
 - clearUserRestriction - [User restriction](UserRestriction), require `restriction` extra, you can find the list of user restrictions [here](https://developer.android.com/reference/kotlin/android/os/UserManager#constants)
 

@@ -4,9 +4,9 @@ All functions there require Device owner or Profile owner. If not, OnwDroid will
 
 ## Wi-Fi Mac address
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
-**[API24]**
+`API24`
 
 This will show you the actual Wi-Fi Mac address of your device, not the randomized Mac
 
@@ -14,24 +14,24 @@ This will show you the actual Wi-Fi Mac address of your device, not the randomiz
 
 ### Preferential network service
 
-**[Device owner(API33)] [Work profile(API31)]**
+`Device owner(API33)` / `Work profile(API31)`
 
 TODO: show entrance when work profile, move this function to a separate page, see DevicePolicyManager#setpreferentialnetworkserviceconfigs
 
 ### Lockdown admin configured network
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
-**[API30]**
+`API30`
 
 Control whether the user can change networks configured by the admin.
 When this lockdown is enabled, the user can still configure and connect to other Wi-Fi networks, or use other Wi-Fi capabilities such as tethering.
 
 ## Minimum Wi-Fi security level
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
-**[API33]**
+`API33`
 
 Specify the minimum security level required for Wi-Fi networks.
 The device may not connect to networks that do not meet the minimum security level. If the current network does not meet the minimum security level set, it will be disconnected. 
@@ -45,9 +45,9 @@ Security levels:
 
 ## Wi-Fi SSID policy
 
-**[Device owner] [Work profile(Org)]**
+`Device owner` / `Work profile(org)`
 
-**[API33]**
+`API33`
 
 Wi-Fi SSID policy specifies the SSID restriction the network must satisfy in order to be eligible for a connection.
 
@@ -59,9 +59,9 @@ Modes:
 
 ## Private DNS
 
-**[Device owner]**
+`Device owner`
 
-**[API29]**
+`API29`
 
 You can set private DNS mode to auto
 
@@ -79,7 +79,7 @@ TODO: set host in coroutine
 
 ## Recommended global proxy
 
-**[Device owner]**
+`Device owner`
 
 Types:
 - No proxy
@@ -92,9 +92,9 @@ This proxy is only a recommendation and it is possible that some apps will ignor
 
 This function is not available now
 
-**[Device owner] [Work profile]**
+`Device owner` / `Work profile`
 
-**[API26]**
+`API26`
 
 Use this function in work profile will only retrieve network logs in work profile
 
@@ -106,9 +106,9 @@ TODO
 
 ## Wi-Fi keypair
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API33]**
+`API33`
 
 Add Wi-Fi authenticating keypair
 
@@ -118,9 +118,9 @@ TODO: catch IllegalArgumentException
 
 ## Override APN settings
 
-**[Device owner]**
+`Device owner`
 
-**[API28]**
+`API28`
 
 I know nothing about APN and carrier settings, so I can't test this function. If you can use it or you can't use it, open a issue to tell me
 

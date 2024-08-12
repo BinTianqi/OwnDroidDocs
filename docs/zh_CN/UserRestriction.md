@@ -1,8 +1,8 @@
 # 用户限制
 
-**[Device owner] [Profile owner]**
+`Device owner` / `Profile owner`
 
-**[API24]**
+`API24`
 
 Profile owner无法禁用部分功能，工作资料中部分功能无效，wearOS部分功能无效
 
