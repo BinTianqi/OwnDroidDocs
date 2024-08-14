@@ -23,7 +23,7 @@ Turn on a switch means disable that function
 |   33   | Wi-Fi tethering              |
 |   33   | Share admin configured Wi-Fi |
 |   23   | Reset network                |
-|        | Configure ththering          |
+|        | Configure tethering          |
 |        | Configure VPN                |
 |   29   | Configure private DNS        |
 |   28   | Airplane mode                |
@@ -46,7 +46,7 @@ Turn on a switch means disable that function
 
 ## Application
 
-| minSDK | Runction                         |
+| minSDK | Function                         |
 |:------:|----------------------------------|
 |        | Install app                      |
 |   29   | Install unknown sources (global) |

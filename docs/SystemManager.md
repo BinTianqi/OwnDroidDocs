@@ -82,8 +82,6 @@ For a managed user its backup functionality is only enabled if both the device o
 
 `API23`
 
-TODO: update permission
-
 ### Common criteria mode
 
 `Device owner` / `Profile owner`
@@ -235,6 +233,10 @@ Only packages in lock task packages list can start lock task mode
 ### Start lock task mode
 
 Enter a app's package name and start lock task mode
+
+You can specify an activity for the app, or use the default activity of the app
+
+OwnDroid will pop a notification when lock task mode start successfully. You can exit lock task mode by click that notification if you allow notification in [Lock task features](#Lock-task-features)
 
 ## CA certificate
 

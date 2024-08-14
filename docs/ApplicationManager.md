@@ -109,16 +109,6 @@ If the status of a permission is granted or denied, you cannot grant or revoke i
 
 :::
 
-::: tip
-
-Use this shell command to list all supported permissions on your device
-
-```shell
-pm list permissions
-```
-TODO: list only runtime permissions
-:::
-
 ## Cross profile apps
 
 `Work profile`

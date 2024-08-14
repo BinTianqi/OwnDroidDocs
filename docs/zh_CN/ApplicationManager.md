@@ -105,16 +105,6 @@ pm list packages
 
 :::
 
-::: tip
-
-使用这个命令列出你的设备中系统支持的所有权限
-
-```shell
-pm list permissions
-```
-
-:::
-
 ## 跨资料应用
 
 `工作资料`
