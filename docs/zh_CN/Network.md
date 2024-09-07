@@ -96,7 +96,33 @@ Wi-Fi网络必须满足SSID限制才能连接
 
 网络日志包含DNS查询和connect()库调用记录
 
-功能开发中
+网络日志可以被导出为JSON文件
+
+::: details NetworkLogs.json
+
+```json
+[
+    // DNS查询事件
+    {
+        "id": "1", // (Long) 事件id，每个事件递增。设备重启时或网络日志启用时，id会重置
+        "timestamp": "12345678", // (Long) 时间戳（毫秒）
+        "type": "dns",
+        "host_name": "example.com", // 要解析的域名
+        "count": 1, // 获取到的ip地址数量
+        "addresses": ["127.0.0.1"] // 获取到的ip地址
+    },
+    // connect() 库调用事件
+    {
+        "id": "2",
+        "timestamp": "12345678",
+        "type": "connect",
+        "address": "127.0.0.1", // 连接的主机
+        "port": "443"
+    }
+]
+```
+
+:::
 
 ## Wi-Fi密钥对
 

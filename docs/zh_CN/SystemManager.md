@@ -266,7 +266,21 @@
 
 并非所有设备都支持重启前安全日志
 
-这个功能正在开发中
+::: details SecurityLogs.json
+
+```json
+[
+    {
+        "id": 1, // (Long) 事件id，每个事件递增。设备重启时或安全日志开启时重置
+        "tag": 210002, // https://developer.android.google.cn/reference/android/app/admin/SecurityLog
+        "time_nanos": 123456789, // (Long) 时间戳（纳秒）
+        "log_level": 3, // https://developer.android.google.cn/reference/android/app/admin/SecurityLog
+        "data": "Some data"
+    }
+]
+```
+
+:::
 
 ## 系统更新策略
 

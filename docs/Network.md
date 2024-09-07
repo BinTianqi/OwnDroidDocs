@@ -90,8 +90,6 @@ This proxy is only a recommendation and it is possible that some apps will ignor
 
 ## Network log
 
-This function is not available now
-
 `Device owner` / `Work profile`
 
 `API26`
@@ -102,7 +100,35 @@ There shouldn't be unaffiliated user on this device if used by Device owner
 
 Network logs contain DNS lookup and connect() library call events.
 
-TODO
+You can export network logs to a JSON file
+
+::: details NetworkLogs.json
+
+```json
+[
+    // DNS lookup event
+    {
+        "id": "1", // (Long)
+        // id of the event, where the id monotonically increases for each event.
+        // The id is reset when the device reboots, and when network logging is enabled.
+        "timestamp": "12345678", // (Long) Timestamp in millisecond
+        "type": "dns",
+        "host_name": "example.com", // Hostname to resolve
+        "count": 1, // Total resolved addresses count
+        "addresses": ["127.0.0.1"] // Resolved addresses
+    },
+    // connect() library call event
+    {
+        "id": "2",
+        "timestamp": "12345678",
+        "type": "connect",
+        "address": "127.0.0.1", // The host connected to
+        "port": "443"
+    }
+]
+```
+
+:::
 
 ## Wi-Fi keypair
 

@@ -269,7 +269,23 @@ Security logs contain various information intended for security auditing purpose
 
 Not all devices support pre-reboot security logs
 
-TODO
+::: details SecurityLogs.json
+
+```json
+[
+    {
+        "id": 1, // (Long)
+        // id of the event, where the id monotonically increases for each event.
+        // The id is reset when the device reboots, and when security logging is enabled.
+        "tag": 210002, // https://developer.android.com/reference/android/app/admin/SecurityLog
+        "time_nanos": 123456789, // (Long) Timestamp in nano seconds
+        "log_level": 3, // https://developer.android.com/reference/android/app/admin/SecurityLog
+        "data": "Some data"
+    }
+]
+```
+
+:::
 
 ## System update policy
 
