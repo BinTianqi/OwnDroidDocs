@@ -176,13 +176,15 @@ DPMRH: Device policy management role holder
 
 设置组织ID后才能获取设备注册专用ID
 
+只能设置一次ID
+
 ## 设备注册专用ID
 
 `Device owner` / `工作资料`
 
 `API31`
 
-需要先设置[组织ID](#组织ID)，不同组织ID的设备注册专用ID不同，恢复出厂设置或删除工作资料后不变
+不同组织ID的设备注册专用ID不同，恢复出厂设置或删除工作资料后不变
 
 ## 禁用账号控制
 

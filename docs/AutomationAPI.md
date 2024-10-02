@@ -2,7 +2,7 @@
 
 ## Get started
 
-First, you should set an automation key in OwnDroid settings, the length of the key can't shorter than 6
+First, you should set an automation key in OwnDroid settings, the length of the key can't be shorter than 20
 
 Most of the automation apps can sending Intent, you can use them with OwnDroid to execute automation tasks or add a launcher shortcut.
 

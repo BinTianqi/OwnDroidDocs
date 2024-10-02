@@ -18,9 +18,12 @@ There can be up to 1 work profile in your device
 
 Options:
 
-- Skip encryption (Require API24 or above, no actual effect)
+- `API22` Migrate account
+  - `API26` Keep account in main user
+- `API24` Skip encryption
+- `API33` Offline provisioning
 
-When creating work profile, Android system will install another OwnDroid to the work profile, that OwnDroid will become a Profile owner
+When creating work profile, Android system will clone OwnDroid into the work profile and set it as Profile owner
 
 ::: info Work profile in WearOS
 
