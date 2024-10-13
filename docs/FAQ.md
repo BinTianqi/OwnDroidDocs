@@ -43,7 +43,7 @@ Use testkey version of OwnDroid
 
 ## Get support
 
-**Telegram:**
-- Channel: [OwnDroid](https://t.me/owndroid_channel)
-- Discussion group: [OwnDroid discussion](https://t.me/owndroid_discussion)
-- CI Builds: [OwnDroid CI](https://t.me/owndroid_ci)
+- [Discussions (GitHub)](https://github.com/BinTianqi/OwnDroid/discussions)
+- [OwnDroid channel (Telegram)](https://t.me/owndroid_channel)
+- [OwnDroid discussion (Telegram)](https://t.me/owndroid_discussion)
+- [OwnDroid CI build (Telegram)](https://t.me/owndroid_ci)

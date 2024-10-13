@@ -47,10 +47,7 @@
 
 ## 获取支持
 
-**Telegram:**
-- 频道: [OwnDroid](https://t.me/owndroid_channel)
-- 讨论群: [OwnDroid discussion](https://t.me/owndroid_discussion)
-- CI构建: [OwnDroid CI](https://t.me/owndroid_ci)
-
-**QQ:**
-- 安卓设备管理员权限交流群：914579017 （非官方，非OwnDroid讨论群）
+- [讨论区(GitHub)](https://github.com/BinTianqi/OwnDroid/discussions)
+- [OwnDroid频道(Telegram)](https://t.me/owndroid_channel)
+- [OwnDroid讨论群(Telegram)](https://t.me/owndroid_discussion)
+- [OwnDroid CI构建(Telegram)](https://t.me/owndroid_ci)
