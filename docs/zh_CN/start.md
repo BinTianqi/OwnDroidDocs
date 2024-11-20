@@ -2,6 +2,10 @@
 
 欢迎来到OwnDroid使用教程
 
+:::warning
+这个文档已经过时
+:::
+
 ## 使用前须知
 
 1. Device admin, Profile owner和Device owner有极高的特权，包括但不限于让你的设备丢失所有数据。请谨慎使用

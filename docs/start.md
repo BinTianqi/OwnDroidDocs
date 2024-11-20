@@ -2,6 +2,10 @@
 
 Welcome to OwnDroid docs
 
+:::warning
+This documemtation is out of date. 
+:::
+
 ## Before you start
 
 1. Device owner and Profile owner has very high privilege, use with caution
