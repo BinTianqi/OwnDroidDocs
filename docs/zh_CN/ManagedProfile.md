@@ -16,9 +16,12 @@
 
 选项：
 
-- `API24` 跳过加密 (TODO)
+- `API22` 迁移账号
+  - `API26` 保留账号在主用户中
+- `API24` 跳过加密
+- `API33` 离线模式
 
-创建后工作资料中的OwnDroid会成为Profile owner
+创建工作资料时安卓系统会把OwnDroid安装在工作资料中，并将其设置为Profile owner
 
 ::: info WearOS
 

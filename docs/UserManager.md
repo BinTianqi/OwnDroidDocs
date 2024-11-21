@@ -21,6 +21,10 @@ TODO: add this command to Shizuku
 - UserID. UserID is not UID. The UserID of system user is 0
 - User serial number. The user serial number of system user is 0
 
+## Options
+
+### Enable logout
+
 ## User operation
 
 It is recommended to specify a user with serial number, you can also use UID, the UID should be any of the apps in the target user

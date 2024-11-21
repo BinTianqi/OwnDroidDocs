@@ -172,15 +172,13 @@ Set the name of your company
 
 Sets the Enterprise ID. This is a requirement for generating an enrollment-specific ID for the device.
 
-TODO: check permission of this and specific id in app
+This ID can be only set once
 
 ## Enrollment specific ID
 
 `Device owner` / `Work profile`
 
 `API31`
-
-Requires [Organization ID](#Organization-ID) is set
 
 The identifier would be consistent even if the work profile is removed and create again (to the same Organization ID), or the device is factory reset and re-enrolled.
 
